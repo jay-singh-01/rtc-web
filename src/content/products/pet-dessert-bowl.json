@@ -1,0 +1,27 @@
+{
+  "name": "PET Dessert Bowl with Lid 180 ml",
+  "category": "dessert",
+  "material": "pet",
+  "description": "Clear dessert bowl with dome or flat lid for fruit cream, parfaits and puddings.",
+  "images": [
+    "../../assets/images/products/pet-dessert-bowl/images/0.jpg",
+    "../../assets/images/products/pet-dessert-bowl/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "180 ml – dome lid",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "180 ml – flat lid",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 680
+}

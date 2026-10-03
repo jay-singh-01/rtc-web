@@ -1,0 +1,70 @@
+---
+import { Image } from "astro:assets";
+import Icon from "@/components/ui/Icon.astro";
+import { img } from "@/lib/images";
+import { products } from "@/lib/products";
+import { materials } from "@/content/taxonomy";
+import { waHref } from "@/content/site";
+
+const sizeCount = Math.floor(products.reduce((a, p) => a + p.options.length, 0) / 10) * 10;
+const rotating = ["biryani.", "chai.", "thali.", "sweet box.", "party.", "business."];
+const headline = ["Packaging", "for", "every"];
+const floats = [
+  { image: "bg-cp-plate", label: "Bagasse plates", cls: "left-[-4%] top-[6%] w-[38%] rotate-[-8deg]", depth: 1.4 },
+  { image: "pt-sealable", label: "Meal trays", cls: "right-[-3%] top-[2%] w-[40%] rotate-[7deg]", depth: 0.9 },
+  { image: "mi-kulhad-100", label: "Kulhads", cls: "left-[2%] bottom-[2%] w-[33%] rotate-[6deg]", depth: 1.8 },
+  { image: "cup-ripple-b", label: "Ripple cups", cls: "right-[1%] bottom-[-2%] w-[36%] rotate-[-6deg]", depth: 1.2 },
+];
+---
+<section class="relative overflow-hidden bg-cream">
+  <!-- soft background blobs -->
+  <div class="pointer-events-none absolute -top-40 -right-40 size-[520px] rounded-full bg-sun/30 blur-3xl" aria-hidden="true"></div>
+  <div class="pointer-events-none absolute -bottom-48 -left-40 size-[480px] rounded-full bg-brand/15 blur-3xl" aria-hidden="true"></div>
+
+  <div class="wrap relative grid items-center gap-10 pt-8 pb-14 sm:pt-14 lg:grid-cols-[1.05fr_1fr] lg:gap-6 lg:pt-16 lg:pb-24">
+    <div>
+      <p class="eyebrow mb-5" data-hero-fade>Raichur's packaging store</p>
+      <h1 class="text-[clamp(44px,11vw,96px)] leading-[.95] font-extrabold tracking-[-.035em]">
+        {headline.map((w) => <span class="mr-[.22em] inline-block overflow-hidden pb-[.06em] align-bottom"><span data-hero-word>{w}</span></span>)}
+        <span class="block overflow-hidden pb-[.08em]"><span data-hero-word class="text-brand">
+          <span class="rotator" data-rotator>{rotating.map((r) => <span>{r}</span>)}</span>
+        </span></span>
+      </h1>
+      <p class="mt-6 max-w-[34rem] text-[17px] leading-relaxed text-ink-2 sm:text-lg" data-hero-fade>
+        Food containers, meal trays, plates, cups and compostable sugarcane &amp; cornstarch tableware — for restaurants, caterers, sweet shops and homes. <b class="font-semibold text-ink">Wholesale &amp; retail.</b>
+      </p>
+      <div class="mt-8 flex flex-wrap gap-2.5 sm:gap-3" data-hero-fade>
+        <a href="/products" class="btn btn-brand px-5 py-3.5 text-[15px] sm:px-7 sm:py-4 sm:text-base" data-magnetic>Browse products <Icon name="arrow" /></a>
+        <a href={waHref("Hi RTC, I'd like to know your prices.")} target="_blank" rel="noopener" class="btn btn-ghost px-5 py-3.5 text-[15px] sm:px-6 sm:py-4 sm:text-base" data-magnetic><Icon name="whatsapp" class="size-5 text-wa-600" /> Get prices</a>
+      </div>
+      <dl class="mt-10 flex gap-8 sm:gap-12" data-hero-fade>
+        <div><dt class="sr-only">Products</dt><dd class="font-display text-[34px] leading-none font-extrabold"><span data-count-to={products.length} data-suffix="+">{products.length}+</span></dd><p class="mt-1.5 text-[13px] text-muted">Products</p></div>
+        <div><dt class="sr-only">Sizes</dt><dd class="font-display text-[34px] leading-none font-extrabold"><span data-count-to={sizeCount} data-suffix="+">{sizeCount}+</span></dd><p class="mt-1.5 text-[13px] text-muted">Sizes &amp; variants</p></div>
+        <div><dt class="sr-only">Materials</dt><dd class="font-display text-[34px] leading-none font-extrabold"><span data-count-to={materials.length}>{materials.length}</span></dd><p class="mt-1.5 text-[13px] text-muted">Materials</p></div>
+      </dl>
+    </div>
+
+    <!-- Visual: centre showcase with floating product cards -->
+    <div class="relative mx-auto aspect-square w-full max-w-[560px]" data-hero-visual>
+      <!-- spinning badge -->
+      <div class="absolute -top-3 right-[18%] z-20" data-float-card data-depth="2.2"><svg class="size-24 animate-[spin_16s_linear_infinite] sm:size-28" viewBox="0 0 100 100" aria-hidden="true">
+        <defs><path id="hero-circle" d="M50 50 m-38 0 a38 38 0 1 1 76 0 a38 38 0 1 1 -76 0" /></defs>
+        <circle cx="50" cy="50" r="49" fill="#17130f" />
+        <text fill="#fff" font-size="10.5" font-weight="700" letter-spacing="2.6"><textPath href="#hero-circle">ECO-FRIENDLY • WHOLESALE • RETAIL •</textPath></text>
+        <text x="50" y="57" text-anchor="middle" font-size="22">🌿</text>
+      </svg></div>
+      <div class="absolute inset-[12%] rounded-full bg-brand" data-float-card data-depth="0.3"></div>
+      <div class="absolute inset-[17%] overflow-hidden rounded-[36px] bg-white shadow-[0_30px_80px_-30px_rgba(0,0,0,.45)]" data-float-card data-depth="0.5">
+        <Image src={img("hero-cover")} alt="Assorted disposable food packaging — paper cups, bagasse clamshells, PET containers and wooden cutlery" widths={[400, 640, 900]} sizes="(min-width: 1024px) 400px, 70vw" class="size-full object-cover" loading="eager" fetchpriority="high" />
+      </div>
+      {floats.map((f) => (
+        <div class:list={["absolute z-10", f.cls]} data-float-card data-depth={f.depth}>
+          <div class="animate-float rounded-[22px] bg-white p-1.5 shadow-[0_20px_50px_-20px_rgba(0,0,0,.45)] ring-1 ring-black/5" style={`animation-delay:-${f.depth * 2}s`}>
+            <Image src={img(f.image)} alt="" widths={[200, 320]} sizes="180px" class="aspect-square w-full rounded-[17px] object-cover" loading="eager" />
+            <p class="px-1.5 pt-1.5 pb-1 text-[11.5px] font-bold sm:text-[13px]">{f.label}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

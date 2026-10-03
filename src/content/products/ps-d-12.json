@@ -1,0 +1,21 @@
+{
+  "name": "Boat Dessert Bowl (D-12)",
+  "category": "dessert",
+  "material": "ps",
+  "description": "Premium PS acrylic serveware with a glass-like finish — for desserts, mithai, starters and buffets.",
+  "images": [
+    "../../assets/images/products/ps-d-12/images/0.jpg"
+  ],
+  "options": [
+    {
+      "label": "Boat Dessert Bowl",
+      "code": "D-12",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 890
+}

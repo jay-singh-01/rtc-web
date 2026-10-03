@@ -1,0 +1,37 @@
+{
+  "name": "PET 145 Square Container",
+  "category": "containers",
+  "material": "pet",
+  "description": "Large 145 mm square PET containers for dry fruits, namkeen and sweets.",
+  "images": [
+    "../../assets/images/products/pet-145-square/images/0.jpg",
+    "../../assets/images/products/pet-145-square/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "45 mm height",
+      "code": "1391",
+      "dims": "145/145/45"
+    },
+    {
+      "label": "58 mm height",
+      "code": "1393",
+      "dims": "145/145/58"
+    },
+    {
+      "label": "75 mm height",
+      "code": "1393",
+      "dims": "145/145/75"
+    },
+    {
+      "label": "95 mm height",
+      "code": "1393",
+      "dims": "145/145/95"
+    }
+  ],
+  "dimLabel": "L/W/H",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 200
+}

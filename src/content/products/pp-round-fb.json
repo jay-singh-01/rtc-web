@@ -1,0 +1,36 @@
+{
+  "name": "PP Round Container (Flat Base)",
+  "category": "containers",
+  "material": "pp",
+  "description": "Clear PP round containers with flat base, 123 mm diameter.",
+  "images": [
+    "../../assets/images/products/pp-round-fb/images/0.jpg"
+  ],
+  "options": [
+    {
+      "label": "300 ml",
+      "code": "5402",
+      "dims": "123/41"
+    },
+    {
+      "label": "400 ml",
+      "code": "5403",
+      "dims": "123/53"
+    },
+    {
+      "label": "500 ml",
+      "code": "5404",
+      "dims": "123/67"
+    },
+    {
+      "label": "650 ml",
+      "code": "5405",
+      "dims": "123/84"
+    }
+  ],
+  "dimLabel": "D/H",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 50
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Wooden Coffee Stirrers 7.5\"",
+  "category": "wooden",
+  "material": "wood",
+  "description": "Wooden stirrers for tea and coffee counters.",
+  "images": [
+    "../../assets/images/products/wooden-stirrer/images/0.jpg",
+    "../../assets/images/products/wooden-stirrer/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "7.5 inch",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 1080
+}

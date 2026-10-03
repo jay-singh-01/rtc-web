@@ -1,0 +1,27 @@
+{
+  "name": "Paper Ice-cream Cups",
+  "category": "cups",
+  "material": "paper",
+  "description": "Printed ice-cream cups with dome or flat lid.",
+  "images": [
+    "../../assets/images/products/paper-icecream/images/0.jpg",
+    "../../assets/images/products/paper-icecream/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "100 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "150 ml",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 650
+}

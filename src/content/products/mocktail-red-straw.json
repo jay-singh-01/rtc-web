@@ -1,0 +1,22 @@
+{
+  "name": "Mocktail 10 mm Red Straws",
+  "category": "straws",
+  "material": "pp",
+  "description": "Wide 10 mm straws for shakes and mocktails.",
+  "images": [
+    "../../assets/images/products/mocktail-red-straw/images/0.jpg",
+    "../../assets/images/products/mocktail-red-straw/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "10 mm",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 1150
+}

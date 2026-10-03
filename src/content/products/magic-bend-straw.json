@@ -1,0 +1,22 @@
+{
+  "name": "Mocktail Magic Bend Straws",
+  "category": "straws",
+  "material": "pp",
+  "description": "Long flexible straws in bright colours.",
+  "images": [
+    "../../assets/images/products/magic-bend-straw/images/0.jpg",
+    "../../assets/images/products/magic-bend-straw/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "Standard",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 1170
+}

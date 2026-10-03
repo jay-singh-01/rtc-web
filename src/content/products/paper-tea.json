@@ -1,0 +1,37 @@
+{
+  "name": "Paper Tea & Coffee Cups",
+  "category": "cups",
+  "material": "paper",
+  "description": "Everyday paper cups for tea, coffee and water.",
+  "images": [
+    "../../assets/images/products/paper-tea/images/0.jpg",
+    "../../assets/images/products/paper-tea/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "65 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "80 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "100 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "130 ml",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": true,
+  "sortOrder": 630
+}

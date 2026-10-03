@@ -1,0 +1,27 @@
+{
+  "name": "BBQ Wooden Skewer Sticks",
+  "category": "wooden",
+  "material": "wood",
+  "description": "Paddle skewers for starters and fruit.",
+  "images": [
+    "../../assets/images/products/bbq-skewer/images/0.jpg",
+    "../../assets/images/products/bbq-skewer/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "4 inch",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "7 inch",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 1110
+}

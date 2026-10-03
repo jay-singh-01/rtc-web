@@ -1,0 +1,36 @@
+{
+  "name": "Wooden Spoon, Fork & Knife",
+  "category": "wooden",
+  "material": "wood",
+  "description": "Plastic-free birchwood cutlery.",
+  "images": [
+    "../../assets/images/products/wooden-cutlery/images/0.jpg",
+    "../../assets/images/products/wooden-cutlery/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "110 mm",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "140 mm",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "160 mm",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [
+    "Spoon",
+    "Fork",
+    "Knife"
+  ],
+  "colorLabel": "Type",
+  "featured": true,
+  "sortOrder": 1050
+}

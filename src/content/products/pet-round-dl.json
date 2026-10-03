@@ -1,0 +1,49 @@
+{
+  "name": "PET Round Hinged Box (Dome Lid)",
+  "category": "containers",
+  "material": "pet",
+  "description": "Round hinged boxes with a dome lid for cakes, desserts and fruit bowls.",
+  "images": [
+    "../../assets/images/products/pet-round-dl/images/0.jpg",
+    "../../assets/images/products/pet-round-dl/images/1.jpg",
+    "../../assets/images/products/pet-round-dl/images/2.jpg",
+    "../../assets/images/products/pet-round-dl/images/3.jpg"
+  ],
+  "options": [
+    {
+      "label": "250 ml – 8 oz",
+      "code": "1451A",
+      "dims": "130/55"
+    },
+    {
+      "label": "350 ml – 12 oz",
+      "code": "1452A",
+      "dims": "130/78"
+    },
+    {
+      "label": "500 ml – 16 oz",
+      "code": "1453A",
+      "dims": "130/87"
+    },
+    {
+      "label": "600 ml – 20 oz",
+      "code": "1454A",
+      "dims": "180/67"
+    },
+    {
+      "label": "750 ml – 24 oz",
+      "code": "1455A",
+      "dims": "180/78"
+    },
+    {
+      "label": "1000 ml – 32 oz",
+      "code": "1456A",
+      "dims": "180/87"
+    }
+  ],
+  "dimLabel": "D/H",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 220
+}

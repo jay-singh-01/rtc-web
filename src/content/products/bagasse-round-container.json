@@ -1,0 +1,39 @@
+{
+  "name": "Bagasse Round Container with Lid",
+  "category": "containers",
+  "material": "bagasse",
+  "description": "Round sugarcane containers for gravies and desserts. Lids available.",
+  "images": [
+    "../../assets/images/products/bagasse-round-container/images/0.jpg",
+    "../../assets/images/products/bagasse-round-container/images/1.jpg",
+    "../../assets/images/products/bagasse-round-container/images/2.jpg",
+    "../../assets/images/products/bagasse-round-container/images/3.jpg"
+  ],
+  "options": [
+    {
+      "label": "340 ml",
+      "code": "DA04",
+      "dims": "130/62"
+    },
+    {
+      "label": "500 ml",
+      "code": "DA23",
+      "dims": "130/80"
+    },
+    {
+      "label": "750 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "1000 ml",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "D/H",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 130
+}

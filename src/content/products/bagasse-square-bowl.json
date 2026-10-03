@@ -1,0 +1,22 @@
+{
+  "name": "Bagasse Square Bowl 150 ml",
+  "category": "plates-bowls",
+  "material": "bagasse",
+  "description": "Square 5 oz sugarcane bowl — great for sweets and sides.",
+  "images": [
+    "../../assets/images/products/bagasse-square-bowl/images/0.jpg",
+    "../../assets/images/products/bagasse-square-bowl/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "150 ml / 5 oz square bowl",
+      "code": "DA03",
+      "dims": "105 × 105"
+    }
+  ],
+  "dimLabel": "Size mm",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 470
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Cornstarch Compartment Tray",
+  "category": "meal-trays",
+  "material": "cornstarch",
+  "description": "Biodegradable compartment trays for thalis and canteens.",
+  "images": [
+    "../../assets/images/products/corn-tray/images/0.jpg",
+    "../../assets/images/products/corn-tray/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "3 CP tray",
+      "code": "7032",
+      "dims": "215/215/28"
+    },
+    {
+      "label": "4 CP tray",
+      "code": "7034",
+      "dims": "280/245/28"
+    },
+    {
+      "label": "6 CP tray",
+      "code": "7038",
+      "dims": "290/245/28"
+    }
+  ],
+  "dimLabel": "L/W/H",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 360
+}

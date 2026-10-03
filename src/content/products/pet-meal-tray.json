@@ -1,0 +1,82 @@
+{
+  "name": "Meal Tray with Lid",
+  "category": "meal-trays",
+  "material": "pet",
+  "description": "Compartment meal trays with matching lids, 2 to 8 compartments.",
+  "images": [
+    "../../assets/images/products/pet-meal-tray/images/0.jpg",
+    "../../assets/images/products/pet-meal-tray/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "2 CP meal tray",
+      "code": "5601",
+      "dims": "217/175/40"
+    },
+    {
+      "label": "2 CP meal tray lid",
+      "code": "5602",
+      "dims": "217/175/7"
+    },
+    {
+      "label": "3 CP meal tray",
+      "code": "5602",
+      "dims": "217/175/40"
+    },
+    {
+      "label": "3 CP meal tray lid",
+      "code": "5603",
+      "dims": "217/175/7"
+    },
+    {
+      "label": "4 CP meal tray",
+      "code": "5604",
+      "dims": "250/200/35"
+    },
+    {
+      "label": "4 CP meal tray lid",
+      "code": "5605",
+      "dims": "250/200/7"
+    },
+    {
+      "label": "5 CP meal tray",
+      "code": "5606",
+      "dims": "275/205/42"
+    },
+    {
+      "label": "5 CP meal tray lid",
+      "code": "5607",
+      "dims": "275/205/7"
+    },
+    {
+      "label": "8 CP meal tray",
+      "code": "5608",
+      "dims": "300/235/37"
+    },
+    {
+      "label": "8 CP meal tray lid",
+      "code": "5609",
+      "dims": "300/235/7"
+    },
+    {
+      "label": "3 CP meal tray (XL)",
+      "code": "5610",
+      "dims": "250/200/45"
+    },
+    {
+      "label": "3 CP meal tray lid (XL)",
+      "code": "5611",
+      "dims": "250/200/7"
+    },
+    {
+      "label": "3 CP meal tray lid (Large)",
+      "code": "5612",
+      "dims": "250/200/35"
+    }
+  ],
+  "dimLabel": "L/W/H",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 330
+}

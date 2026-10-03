@@ -1,0 +1,50 @@
+{
+  "name": "PET Sauce & Dip Container",
+  "category": "containers",
+  "material": "pet",
+  "description": "Small hinged dip cups for sauces, chutneys and dressings — oval, round and square.",
+  "images": [
+    "../../assets/images/products/pet-sauce/images/0.jpg",
+    "../../assets/images/products/pet-sauce/images/1.jpg",
+    "../../assets/images/products/pet-sauce/images/2.jpg",
+    "../../assets/images/products/pet-sauce/images/3.jpg",
+    "../../assets/images/products/pet-sauce/images/4.jpg"
+  ],
+  "options": [
+    {
+      "label": "35 ml oval",
+      "code": "1408",
+      "dims": "56/25"
+    },
+    {
+      "label": "70 ml oval",
+      "code": "1409",
+      "dims": "58/28"
+    },
+    {
+      "label": "85 ml oval",
+      "code": "1418",
+      "dims": "60/30"
+    },
+    {
+      "label": "120 ml round",
+      "code": "1410",
+      "dims": "85/40"
+    },
+    {
+      "label": "35 ml square",
+      "code": "1406",
+      "dims": "60/54/25"
+    },
+    {
+      "label": "70 ml square",
+      "code": "1407",
+      "dims": "62/62/35"
+    }
+  ],
+  "dimLabel": "Size mm",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 300
+}

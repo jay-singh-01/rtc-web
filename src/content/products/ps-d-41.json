@@ -1,0 +1,21 @@
+{
+  "name": "Footed Dessert Cup (D-41)",
+  "category": "dessert",
+  "material": "ps",
+  "description": "Premium PS acrylic serveware with a glass-like finish — for desserts, mithai, starters and buffets.",
+  "images": [
+    "../../assets/images/products/ps-d-41/images/0.jpg"
+  ],
+  "options": [
+    {
+      "label": "Footed Dessert Cup",
+      "code": "D-41",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 900
+}

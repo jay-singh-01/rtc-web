@@ -1,0 +1,21 @@
+{
+  "name": "Mitti Naav",
+  "category": "mitti",
+  "material": "clay",
+  "description": "Boat-shaped clay dish for desserts and chaat.",
+  "images": [
+    "../../assets/images/products/mitti-naav/images/0.jpg"
+  ],
+  "options": [
+    {
+      "label": "Standard",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 1020
+}

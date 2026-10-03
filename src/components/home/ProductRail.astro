@@ -1,0 +1,39 @@
+---
+import Icon from "@/components/ui/Icon.astro";
+import ProductCard from "@/components/product/ProductCard.astro";
+import { categoryById } from "@/content/taxonomy";
+import type { Product } from "@/types";
+
+interface Props { id: string; eyebrow: string; title: string; products: Product[]; tabs?: boolean; href?: string; linkLabel?: string; tone?: "white" | "cream" }
+const { id, eyebrow, title, products, tabs = false, href, linkLabel = "See all", tone = "white" } = Astro.props;
+const tabCats = tabs ? [...new Set(products.map((p) => p.category))] : [];
+---
+<section class:list={["section overflow-hidden", tone === "cream" && "bg-cream"]} data-rail={id}>
+  <div class="wrap">
+    <div class="mb-6 flex flex-wrap items-end justify-between gap-4 sm:mb-8">
+      <div data-reveal><p class="eyebrow mb-3">{eyebrow}</p><h2 class="h-section">{title}</h2></div>
+      <div class="flex items-center gap-2" data-reveal>
+        {href && <a href={href} class="mr-2 inline-flex items-center gap-1.5 font-semibold text-brand-600">{linkLabel} <Icon name="arrow" class="size-4" /></a>}
+        <button type="button" class="hidden size-12 place-items-center rounded-full bg-white ring-1 ring-line transition hover:ring-ink sm:grid" data-scroll-row={`${id}-row`} data-dir="-1" aria-label="Scroll left"><Icon name="left" /></button>
+        <button type="button" class="hidden size-12 place-items-center rounded-full bg-ink text-white transition hover:bg-black sm:grid" data-scroll-row={`${id}-row`} data-dir="1" aria-label="Scroll right"><Icon name="right" /></button>
+      </div>
+    </div>
+    {tabs && (
+      <div class="no-scrollbar -mx-4 mb-6 flex gap-2 overflow-x-auto px-4 sm:mx-0 sm:px-0" role="tablist" data-reveal>
+        <button type="button" role="tab" aria-selected="true" data-rail-tab="all" class="flex-none rounded-full px-5 py-2.5 text-[14px] font-semibold ring-1 ring-line transition aria-selected:bg-ink aria-selected:text-white aria-selected:ring-ink">All</button>
+        {tabCats.map((c) => (
+          <button type="button" role="tab" aria-selected="false" data-rail-tab={c} class="flex-none rounded-full bg-white px-5 py-2.5 text-[14px] font-semibold ring-1 ring-line transition aria-selected:bg-ink aria-selected:text-white aria-selected:ring-ink">{categoryById[c].short}</button>
+        ))}
+      </div>
+    )}
+  </div>
+  <div class="wrap max-sm:px-0">
+    <div id={`${id}-row`} class="snap-row no-scrollbar pb-2 max-sm:px-4">
+      {products.map((p, i) => (
+        <div class="w-[46%] flex-none sm:w-[31%] lg:w-[calc((100%-60px)/4)]" data-rail-item={p.category}>
+          <ProductCard product={p} eager={i < 2 && id === "best"} />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,16 @@
+---
+import type { GetStaticPaths } from "astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Listing from "@/components/product/Listing.astro";
+import { categories } from "@/content/taxonomy";
+import { productsInCategory, sortedProducts } from "@/lib/catalog";
+import type { Category } from "@/types";
+
+export const getStaticPaths = (() => categories.map((c) => ({ params: { slug: c.id }, props: { category: c } }))) satisfies GetStaticPaths;
+
+const { category } = Astro.props as { category: Category };
+const list = sortedProducts(productsInCategory(category.id));
+---
+<BaseLayout title={category.name} description={`${category.name} — ${category.blurb}. ${list.length} products available at Rajput Trading Company, Raichur.`} image={category.image} active="products">
+  <Listing products={list} activeCat={category.id} title={category.name} blurb={category.blurb} />
+</BaseLayout>

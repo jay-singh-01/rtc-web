@@ -1,0 +1,90 @@
+---
+import "@fontsource-variable/inter";
+import "@fontsource-variable/bricolage-grotesque";
+import "@/styles/global.css";
+import { getImage } from "astro:assets";
+import Header from "@/components/layout/Header.astro";
+import Footer from "@/components/layout/Footer.astro";
+import BottomNav from "@/components/layout/BottomNav.astro";
+import Overlays from "@/components/layout/Overlays.astro";
+import Splash from "@/components/splash/Splash.astro";
+import { clientProducts } from "@/lib/catalog";
+import { img } from "@/lib/images";
+import { site } from "@/content/site";
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  active?: string;
+  /** Hide the phone bottom nav (product page shows its own action bar). */
+  hideBottomNav?: boolean;
+  jsonLd?: Record<string, unknown>;
+  /** Minimal page without header/footer/bottom nav (e.g. the Instagram links page). */
+  bare?: boolean;
+}
+const { title, description = site.description, image = "hero-cover", active, hideBottomNav = false, jsonLd, bare = false } = Astro.props;
+const fullTitle = title ? `${title} | ${site.name}, Raichur` : `${site.name} (RTC) | Disposable Food Packaging in Raichur`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const og = await getImage({ src: img(image), width: 1200, format: "jpg" });
+const ogUrl = new URL(og.src, Astro.site);
+const data = JSON.stringify(await clientProducts()).replace(/</g, "\\u003c");
+const store = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  name: site.name,
+  alternateName: site.short,
+  url: site.url,
+  telephone: `+91-${site.phone}`,
+  email: site.email,
+  image: ogUrl.href,
+  address: { "@type": "PostalAddress", streetAddress: `${site.address.line1}, ${site.address.line2}`, addressLocality: site.address.city, addressRegion: site.address.state, postalCode: site.address.pin, addressCountry: "IN" },
+};
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="theme-color" content="#f26a1b" />
+    <link rel="icon" href="/favicon.jpg" />
+    <link rel="apple-touch-icon" href="/favicon.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="generator" content={Astro.generator} />
+    <!-- Decide motion + splash before first paint (no flash). -->
+    <script is:inline>
+      (function () {
+        var d = document.documentElement;
+        var rm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (!rm) d.classList.add("motion");
+        var seen = false;
+        try { seen = !!sessionStorage.getItem("rtc-splash"); } catch (e) {}
+        d.classList.add(rm || seen ? "no-splash" : "splash-active");
+      })();
+    </script>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd ?? store)} />
+  </head>
+  <body>
+    <a href="#main" class="sr-only z-[300] rounded-full bg-ink px-4 py-2 text-white focus:not-sr-only focus:fixed focus:top-3 focus:left-3">Skip to content</a>
+    <Splash />
+    {!bare && <Header active={active} />}
+    <main id="main"><slot /></main>
+    {!bare && <Footer />}
+    {!hideBottomNav && !bare && <BottomNav active={active} />}
+    <Overlays />
+    <script id="rtc-products" type="application/json" set:html={data} />
+    <noscript><style>html.motion [data-reveal], html.motion [data-hero-word], html.motion [data-hero-fade], html.motion [data-float-card] { opacity: 1 !important; transform: none !important; } #splash, #sp-curtain-2 { display: none !important; }</style></noscript>
+    <script>
+      import "@/scripts/main";
+    </script>
+  </body>
+</html>

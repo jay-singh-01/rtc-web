@@ -1,0 +1,35 @@
+{
+  "name": "Paper Round Container with Lid",
+  "category": "containers",
+  "material": "paper",
+  "description": "Food-grade paper tubs with paper lids for soups, noodles and ice-cream.",
+  "images": [
+    "../../assets/images/products/paper-round/images/0.jpg",
+    "../../assets/images/products/paper-round/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "500 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "750 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "1000 ml",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [
+    "White",
+    "Brown"
+  ],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 90
+}

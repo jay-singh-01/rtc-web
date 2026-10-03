@@ -1,0 +1,20 @@
+---
+interface Props { words: string[]; tone?: "brand" | "ink"; reverse?: boolean }
+const { words, tone = "brand", reverse = false } = Astro.props;
+---
+<!-- Giant scrolling words; skews with scroll speed (see home.ts). -->
+<div class:list={["overflow-hidden py-5 sm:py-7", tone === "brand" ? "bg-brand text-white" : "bg-ink text-white"]} aria-hidden="true">
+  <div data-velocity-skew>
+    <div class:list={["flex w-max animate-marquee", reverse && "[animation-direction:reverse]"]}>
+      {[0, 1].map(() => (
+        <div class="flex shrink-0 items-center">
+          {words.map((w) => (
+            <span class="flex items-center font-display text-[clamp(34px,7vw,76px)] leading-none font-extrabold tracking-tight uppercase">
+              <span class="px-5 sm:px-8">{w}</span><span class="text-sun">✦</span>
+            </span>
+          ))}
+        </div>
+      ))}
+    </div>
+  </div>
+</div>

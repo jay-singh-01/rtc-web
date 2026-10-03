@@ -1,0 +1,42 @@
+{
+  "name": "Tamper-proof Compartment Meal Box",
+  "category": "meal-trays",
+  "material": "pp",
+  "description": "Tamper-evident compartment boxes — the lid can't be reopened without tearing. Ideal for delivery.",
+  "images": [
+    "../../assets/images/products/tamperproof-meal-box/images/0.jpg",
+    "../../assets/images/products/tamperproof-meal-box/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "3 CP small",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "3 CP large",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "4 CP",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "5 CP",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "8 CP",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 320
+}

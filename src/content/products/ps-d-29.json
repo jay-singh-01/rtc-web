@@ -1,0 +1,21 @@
+{
+  "name": "Hexagon Bowl (D-29)",
+  "category": "dessert",
+  "material": "ps",
+  "description": "Premium PS acrylic serveware with a glass-like finish — for desserts, mithai, starters and buffets.",
+  "images": [
+    "../../assets/images/products/ps-d-29/images/0.jpg"
+  ],
+  "options": [
+    {
+      "label": "Hexagon Bowl",
+      "code": "D-29",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 910
+}

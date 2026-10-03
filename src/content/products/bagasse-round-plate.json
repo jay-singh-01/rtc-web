@@ -1,0 +1,47 @@
+{
+  "name": "Bagasse Round Plate",
+  "category": "plates-bowls",
+  "material": "bagasse",
+  "description": "Sturdy compostable sugarcane plates. Microwave safe, freezer friendly, water & oil resistant, no plastic coating.",
+  "images": [
+    "../../assets/images/products/bagasse-round-plate/images/0.jpg",
+    "../../assets/images/products/bagasse-round-plate/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "6\" round plate",
+      "code": "DA05",
+      "dims": "155 × 16"
+    },
+    {
+      "label": "7\" round plate",
+      "code": "DA06",
+      "dims": "175 × 16"
+    },
+    {
+      "label": "9\" round plate",
+      "code": "DA11",
+      "dims": "230 × 20"
+    },
+    {
+      "label": "10\" round plate",
+      "code": "DA07",
+      "dims": "260 × 20"
+    },
+    {
+      "label": "11\" round plate",
+      "code": "DA27",
+      "dims": "275 × 30"
+    },
+    {
+      "label": "12\" round plate",
+      "code": "DA12",
+      "dims": "285 × 30"
+    }
+  ],
+  "dimLabel": "Dia × H mm",
+  "colors": [],
+  "colorLabel": "",
+  "featured": true,
+  "sortOrder": 390
+}

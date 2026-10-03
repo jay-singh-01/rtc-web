@@ -1,0 +1,50 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Hero from "@/components/home/Hero.astro";
+import MarqueeBand from "@/components/home/MarqueeBand.astro";
+import CategoryShowcase from "@/components/home/CategoryShowcase.astro";
+import ProductRail from "@/components/home/ProductRail.astro";
+import EcoStack from "@/components/home/EcoStack.astro";
+import Materials from "@/components/home/Materials.astro";
+import HowItWorks from "@/components/home/HowItWorks.astro";
+import About from "@/components/home/About.astro";
+import CatalogueGrid from "@/components/CatalogueGrid.astro";
+import VisitUs from "@/components/VisitUs.astro";
+import Icon from "@/components/ui/Icon.astro";
+import { products } from "@/lib/products";
+import { isEco } from "@/lib/catalog";
+
+const featured = products.filter((p) => p.featured);
+const eco = products.filter((p) => isEco(p) && p.featured);
+---
+<BaseLayout active="home">
+  <Hero />
+  <MarqueeBand words={["Containers", "Meal trays", "Bagasse plates", "Kulhads", "Paper cups", "Clamshells", "Dessert cups", "Straws"]} />
+  <CategoryShowcase />
+  <ProductRail id="best" eyebrow="Bestsellers" title="Popular with our customers" products={featured} tabs tone="cream" href="/products" linkLabel="All products" />
+  <EcoStack />
+  <ProductRail id="eco" eyebrow="Eco-friendly picks" title="Compostable & natural" products={eco} href="/products?eco=1" linkLabel="All eco-friendly" />
+  <MarqueeBand tone="ink" reverse words={["Wholesale", "Retail", "Custom printing", "Raichur", "Bulk orders", "WhatsApp us"]} />
+  <Materials />
+  <HowItWorks />
+  <About />
+  <section class="section bg-cream">
+    <div class="wrap">
+      <div class="mb-8 flex flex-wrap items-end justify-between gap-4" data-reveal>
+        <div><p class="eyebrow mb-3">Catalogues</p><h2 class="h-section">Every size, every code.</h2><p class="mt-2 text-muted">Download our PDF catalogues with full dimensions.</p></div>
+        <a href="/catalogues" class="inline-flex items-center gap-1.5 font-semibold text-brand-600">All catalogues <Icon name="arrow" class="size-4" /></a>
+      </div>
+      <CatalogueGrid />
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap">
+      <div class="mb-8" data-reveal><p class="eyebrow mb-3">Visit us</p><h2 class="h-section">Come see the range in person.</h2></div>
+      <VisitUs />
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  import "@/scripts/home";
+</script>

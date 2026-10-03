@@ -1,0 +1,38 @@
+{
+  "name": "Mitti Kulhad",
+  "category": "mitti",
+  "material": "clay",
+  "description": "Traditional terracotta kulhads for chai, lassi and kulfi.",
+  "images": [
+    "../../assets/images/products/kulhad/images/0.jpg",
+    "../../assets/images/products/kulhad/images/1.jpg",
+    "../../assets/images/products/kulhad/images/2.jpg"
+  ],
+  "options": [
+    {
+      "label": "70 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "100 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "180 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "200 ml",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": true,
+  "sortOrder": 970
+}

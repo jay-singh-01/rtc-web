@@ -1,0 +1,26 @@
+{
+  "name": "Cornstarch Bowl",
+  "category": "plates-bowls",
+  "material": "cornstarch",
+  "description": "Biodegradable cornstarch bowls for curries, desserts and soups.",
+  "images": [
+    "../../assets/images/products/corn-bowl/images/0.jpg"
+  ],
+  "options": [
+    {
+      "label": "180 ml bowl",
+      "code": "7001",
+      "dims": "105/40"
+    },
+    {
+      "label": "250 ml bowl",
+      "code": "7003",
+      "dims": "115/45"
+    }
+  ],
+  "dimLabel": "D/H",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 490
+}

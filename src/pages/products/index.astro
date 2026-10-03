@@ -1,0 +1,8 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Listing from "@/components/product/Listing.astro";
+import { sortedProducts } from "@/lib/catalog";
+---
+<BaseLayout title="All products" description="Browse disposable food packaging at RTC Raichur — containers, meal trays, bagasse plates, cups, dessertware, kulhads, wooden cutlery and straws." active="products">
+  <Listing products={sortedProducts()} title="All products" blurb="Tap + to add sizes to your enquiry list, then send it to us on WhatsApp for prices." />
+</BaseLayout>

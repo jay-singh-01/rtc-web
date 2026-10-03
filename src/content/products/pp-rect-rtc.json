@@ -1,0 +1,41 @@
+{
+  "name": "PP Rectangular Container 137 × 102",
+  "category": "containers",
+  "material": "pp",
+  "description": "Clear PP rectangular containers on a 137 × 102 mm footprint in five heights.",
+  "images": [
+    "../../assets/images/products/pp-rect-rtc/images/0.jpg"
+  ],
+  "options": [
+    {
+      "label": "137 × 102 × 30 mm",
+      "code": "5552",
+      "dims": "137/102/30"
+    },
+    {
+      "label": "137 × 102 × 42 mm",
+      "code": "5553",
+      "dims": "137/102/42"
+    },
+    {
+      "label": "137 × 102 × 45 mm",
+      "code": "5554",
+      "dims": "137/102/45"
+    },
+    {
+      "label": "137 × 102 × 55 mm",
+      "code": "5555",
+      "dims": "137/102/55"
+    },
+    {
+      "label": "137 × 102 × 75 mm",
+      "code": "5556",
+      "dims": "137/102/75"
+    }
+  ],
+  "dimLabel": "L/W/H",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 70
+}

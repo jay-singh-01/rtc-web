@@ -1,0 +1,44 @@
+{
+  "name": "Rectangular Container with Dome Lid",
+  "category": "containers",
+  "material": "pp",
+  "description": "Premium black rectangular containers with a raised dome lid.",
+  "images": [
+    "../../assets/images/products/rect-container-dome/images/0.jpg",
+    "../../assets/images/products/rect-container-dome/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "250 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "500 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "750 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "1000 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "1500 ml",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [
+    "Black"
+  ],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 40
+}

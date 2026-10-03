@@ -1,0 +1,42 @@
+{
+  "name": "Compartment Meal Box with Lid",
+  "category": "meal-trays",
+  "material": "pp",
+  "description": "Black compartment meal boxes with clear lid for thalis and combo meals.",
+  "images": [
+    "../../assets/images/products/black-meal-box/images/0.jpg",
+    "../../assets/images/products/black-meal-box/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "3 CP small",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "3 CP large",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "4 CP",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "5 CP",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "8 CP",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": true,
+  "sortOrder": 310
+}

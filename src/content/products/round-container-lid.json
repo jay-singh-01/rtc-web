@@ -1,0 +1,61 @@
+{
+  "name": "Round Container with Lid",
+  "category": "containers",
+  "material": "pp",
+  "description": "Leak-resistant round containers with a tight-fitting clear lid. Ideal for curries, dal, biryani and gravies.",
+  "images": [
+    "../../assets/images/products/round-container-lid/images/0.jpg",
+    "../../assets/images/products/round-container-lid/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "100 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "250 gm",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "250 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "400 gm",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "500 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "750 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "1000 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "1500 ml",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [
+    "Black",
+    "White",
+    "Natural"
+  ],
+  "colorLabel": "",
+  "featured": true,
+  "sortOrder": 10
+}

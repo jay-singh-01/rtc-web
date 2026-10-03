@@ -1,0 +1,37 @@
+{
+  "name": "Sealable Meal Tray",
+  "category": "meal-trays",
+  "material": "pet",
+  "description": "Compartment trays made for sealing machines — leak-proof meals for canteens and cloud kitchens.",
+  "images": [
+    "../../assets/images/products/sealable-meal-tray/images/0.jpg",
+    "../../assets/images/products/sealable-meal-tray/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "5 CP meal tray sealable",
+      "code": "5621",
+      "dims": "300/225/35"
+    },
+    {
+      "label": "5 CP meal box lid sealable",
+      "code": "5624",
+      "dims": "304/228/7"
+    },
+    {
+      "label": "8 CP meal tray sealable",
+      "code": "5622",
+      "dims": "300/225/35"
+    },
+    {
+      "label": "8 CP meal box lid sealable",
+      "code": "5623",
+      "dims": "304/228/7"
+    }
+  ],
+  "dimLabel": "L/W/H",
+  "colors": [],
+  "colorLabel": "",
+  "featured": true,
+  "sortOrder": 340
+}

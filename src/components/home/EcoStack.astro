@@ -1,0 +1,40 @@
+---
+import { Image } from "astro:assets";
+import Icon from "@/components/ui/Icon.astro";
+import { img } from "@/lib/images";
+
+const cards = [
+  { tone: "bg-sun", text: "text-ink", kicker: "01 · Sugarcane bagasse", title: "Made from sugarcane, not plastic.", body: "Our bagasse plates, bowls and clamshells are pressed from sugarcane pulp left over after juicing — sturdy, natural and compostable.", image: "life-idli", chips: ["Compostable", "No plastic coating", "Hot food friendly"], cta: { href: "/products?mat=bagasse", label: "Shop sugarcane" } },
+  { tone: "bg-[#f2ead9]", text: "text-ink", kicker: "02 · Cornstarch", title: "Microwave it. Freeze it. Then let it go.", body: "Cornstarch meal boxes and containers are fully biodegradable, yet strong enough for curries and safe in the microwave and freezer.", image: "life-cornstarch", chips: ["Biodegradable", "Microwave safe", "Freezer safe"], cta: { href: "/products?mat=cornstarch", label: "Shop cornstarch" } },
+  { tone: "bg-eco", text: "text-white", kicker: "03 · Clay, wood & paper", title: "Old-school materials, still the best.", body: "Mitti kulhads for chai, birchwood cutlery, bamboo skewers and paper straws — natural choices your customers will notice.", image: "life-sweets", chips: ["Kulhads", "Wooden cutlery", "Paper straws"], cta: { href: "/products?eco=1", label: "See the eco range" } },
+];
+---
+<!-- Sticky stacking cards: each card pins and the next slides over it. Pure CSS, smooth on phones. -->
+<section class="section bg-white">
+  <div class="wrap">
+    <div class="mb-10 max-w-2xl" data-reveal>
+      <p class="eyebrow mb-3 !text-eco">Go plastic-free</p>
+      <h2 class="h-section">Tough on food.<br />Kind to the planet.</h2>
+    </div>
+    <div class="relative">
+      {cards.map((c, i) => (
+        <article class:list={["sticky mb-6 overflow-hidden rounded-[32px] shadow-[0_-10px_40px_-20px_rgba(0,0,0,.25)]", c.tone, c.text]} style={`top: calc(84px + ${i * 22}px)`} data-stack-card>
+          <div class="grid lg:grid-cols-2">
+            <div class="flex flex-col justify-center p-7 sm:p-12">
+              <p class:list={["mb-4 text-[12.5px] font-bold tracking-[.16em] uppercase", c.text === "text-white" ? "text-white/70" : "text-ink/60"]}>{c.kicker}</p>
+              <h3 class="text-[clamp(28px,4.4vw,50px)] leading-[1.02] font-extrabold">{c.title}</h3>
+              <p class:list={["mt-4 max-w-md text-[16px]", c.text === "text-white" ? "text-white/85" : "text-ink-2"]}>{c.body}</p>
+              <ul class="mt-6 flex flex-wrap gap-2">
+                {c.chips.map((t) => <li class:list={["inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-[13px] font-semibold", c.text === "text-white" ? "bg-white/15" : "bg-white/70"]}><Icon name="check" class="size-4" />{t}</li>)}
+              </ul>
+              <a href={c.cta.href} class:list={["btn mt-8 w-fit", c.text === "text-white" ? "bg-white text-ink hover:bg-cream" : "btn-ink"]}>{c.cta.label} <Icon name="arrow" /></a>
+            </div>
+            <div class="relative min-h-[240px] overflow-hidden sm:min-h-[320px] lg:min-h-[480px]">
+              <Image src={img(c.image)} alt="" widths={[480, 800, 1000]} sizes="(min-width:1024px) 640px, 100vw" class="absolute inset-0 size-full scale-110 object-cover" data-parallax="0.12" />
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,60 @@
+---
+import Icon from "@/components/ui/Icon.astro";
+import { optionLabel } from "@/lib/catalog";
+import type { Product } from "@/types";
+
+interface Props { product: Product }
+const { product: p } = Astro.props;
+const units = ["Packets", "Cartons", "Pieces"];
+const hasDetail = p.options.some((o) => o[0] || o[2]);
+---
+<div id="pd-picker">
+  {p.options.length > 1 && (
+    <fieldset class="mb-6">
+      <legend class="label mb-2.5 flex w-full items-baseline justify-between">
+        <span>Choose size / variant</span><span class="text-[12.5px] font-normal text-muted">{p.options.length} options</span>
+      </legend>
+      <div class:list={["grid gap-2", hasDetail ? "grid-cols-1 sm:grid-cols-2" : "grid-cols-2 sm:grid-cols-3"]}>
+        {p.options.map((o, i) => (
+          <button type="button" class="chip-opt" data-opt={optionLabel(o)} aria-pressed={i === 0 ? "true" : "false"}>
+            <span class="text-[14.5px] leading-snug font-semibold">{o[1]}</span>
+            {(o[0] || o[2]) && (
+              <span class="mt-0.5 flex flex-wrap gap-x-3 text-[12.5px] text-muted">
+                {o[0] && <span class="font-mono font-semibold text-ink-2">{o[0]}</span>}
+                {o[2] && <span>{p.dimLabel ? `${p.dimLabel}: ` : ""}{o[2]}</span>}
+              </span>
+            )}
+          </button>
+        ))}
+      </div>
+    </fieldset>
+  )}
+  {p.options.length === 1 && (
+    <div class="mb-6 rounded-2xl bg-cream p-4 ring-1 ring-line">
+      <input type="hidden" data-opt-fixed value={optionLabel(p.options[0])} />
+      <p class="text-[14.5px] font-semibold">{p.options[0][1]}</p>
+      {(p.options[0][0] || p.options[0][2]) && <p class="mt-0.5 text-[13px] text-muted">{p.options[0][0] && <span class="mr-3 font-mono font-semibold text-ink-2">{p.options[0][0]}</span>}{p.options[0][2] && <span>{p.dimLabel}: {p.options[0][2]}</span>}</p>}
+    </div>
+  )}
+  {p.colors && (
+    <fieldset class="mb-6">
+      <legend class="label mb-2.5">{p.colorLabel ?? "Colour"}</legend>
+      <div class="flex flex-wrap gap-2">
+        {p.colors.map((c, i) => <button type="button" class="chip-opt min-h-0 px-4 py-2.5 text-[14px] font-semibold" data-color={c} aria-pressed={i === 0 ? "true" : "false"}>{c}</button>)}
+      </div>
+    </fieldset>
+  )}
+  <fieldset>
+    <legend class="label mb-2.5">Quantity</legend>
+    <div class="flex flex-wrap items-center gap-3">
+      <div class="flex items-center rounded-full bg-cream ring-1 ring-line">
+        <button type="button" class="grid size-12 place-items-center rounded-full transition active:scale-90" data-step="-1" aria-label="Decrease"><Icon name="minus" /></button>
+        <input data-qty type="number" inputmode="numeric" min="1" value="1" aria-label="Quantity" class="w-14 bg-transparent text-center text-lg font-bold outline-none" />
+        <button type="button" class="grid size-12 place-items-center rounded-full transition active:scale-90" data-step="1" aria-label="Increase"><Icon name="plus" /></button>
+      </div>
+      <div class="flex rounded-full bg-cream p-1 ring-1 ring-line" role="group" aria-label="Unit">
+        {units.map((u, i) => <button type="button" class="rounded-full px-3.5 py-2 text-[13px] font-semibold transition aria-pressed:bg-ink aria-pressed:text-white" data-unit={u} aria-pressed={i === 0 ? "true" : "false"}>{u}</button>)}
+      </div>
+    </div>
+  </fieldset>
+</div>

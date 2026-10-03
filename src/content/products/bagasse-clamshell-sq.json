@@ -1,0 +1,32 @@
+{
+  "name": "Bagasse Clamshell with Attached Lid",
+  "category": "takeaway",
+  "material": "bagasse",
+  "description": "Square sugarcane clamshells with a locking attached lid.",
+  "images": [
+    "../../assets/images/products/bagasse-clamshell-sq/images/0.jpg",
+    "../../assets/images/products/bagasse-clamshell-sq/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "6 × 6 sq",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "8 × 8 sq",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "9 × 9 sq",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": true,
+  "sortOrder": 510
+}

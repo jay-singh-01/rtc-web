@@ -1,0 +1,27 @@
+{
+  "name": "Mocktail Umbrella Sticks",
+  "category": "wooden",
+  "material": "wood",
+  "description": "Colourful paper umbrellas for mocktails and desserts.",
+  "images": [
+    "../../assets/images/products/umbrella-sticks/images/0.jpg",
+    "../../assets/images/products/umbrella-sticks/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "4 inch",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "7 inch",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 1090
+}

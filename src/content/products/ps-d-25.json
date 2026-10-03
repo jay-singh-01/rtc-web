@@ -1,0 +1,21 @@
+{
+  "name": "Rectangular Dessert Tray (D-25)",
+  "category": "dessert",
+  "material": "ps",
+  "description": "Premium PS acrylic serveware with a glass-like finish — for desserts, mithai, starters and buffets.",
+  "images": [
+    "../../assets/images/products/ps-d-25/images/0.jpg"
+  ],
+  "options": [
+    {
+      "label": "Rectangular Dessert Tray",
+      "code": "D-25",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 760
+}

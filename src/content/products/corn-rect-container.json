@@ -1,0 +1,33 @@
+{
+  "name": "Cornstarch Rectangular Container with Lid",
+  "category": "containers",
+  "material": "cornstarch",
+  "description": "Biodegradable cornstarch rectangular containers with lid. Microwave and freezer safe.",
+  "images": [
+    "../../assets/images/products/corn-rect-container/images/0.jpg",
+    "../../assets/images/products/corn-rect-container/images/1.jpg",
+    "../../assets/images/products/corn-rect-container/images/2.jpg"
+  ],
+  "options": [
+    {
+      "label": "500 ml",
+      "code": "7084",
+      "dims": "175/120/50"
+    },
+    {
+      "label": "750 ml",
+      "code": "7086",
+      "dims": "175/120/70"
+    },
+    {
+      "label": "1000 ml",
+      "code": "7087",
+      "dims": "175/120/90"
+    }
+  ],
+  "dimLabel": "L/W/H",
+  "colors": [],
+  "colorLabel": "",
+  "featured": true,
+  "sortOrder": 160
+}

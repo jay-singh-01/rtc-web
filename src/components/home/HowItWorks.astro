@@ -1,0 +1,43 @@
+---
+import Icon from "@/components/ui/Icon.astro";
+import { industries } from "@/content/taxonomy";
+
+const steps = [
+  { icon: "plus" as const, title: "Build your list", body: "Browse, pick sizes and quantities, and tap + to add them to your enquiry list." },
+  { icon: "whatsapp" as const, title: "Send it in one tap", body: "Send the whole list on WhatsApp (or email). No sign-up, no payment online." },
+  { icon: "box" as const, title: "Get prices & pick up", body: "We reply with the best price and availability. Collect from Gunj Road, or ask us about delivery." },
+];
+---
+<section class="section bg-ink text-white" data-steps>
+  <div class="wrap">
+    <div class="mb-12 max-w-2xl" data-reveal>
+      <p class="eyebrow mb-3 !text-sun">How to order</p>
+      <h2 class="h-section text-white">A quote in three taps.</h2>
+    </div>
+    <div class="relative grid gap-5 md:grid-cols-3">
+      <!-- progress line that draws as you scroll -->
+      <div class="absolute top-8 right-[16%] left-[16%] hidden h-[2px] bg-white/10 md:block" aria-hidden="true"><div class="h-full origin-left scale-x-0 bg-brand" data-steps-line></div></div>
+      {steps.map((s, i) => (
+        <div class="relative rounded-[28px] bg-white/[.06] p-7 ring-1 ring-white/10" data-reveal>
+          <div class="relative z-10 mb-6 flex items-center gap-4">
+            <span class="grid size-16 place-items-center rounded-full bg-brand text-white shadow-[0_0_0_8px_rgba(23,19,15,1)]"><Icon name={s.icon} class="size-7" /></span>
+            <span class="font-display text-[54px] leading-none font-extrabold text-white/10">0{i + 1}</span>
+          </div>
+          <h3 class="text-[24px] text-white">{s.title}</h3>
+          <p class="mt-2 text-[15.5px] text-white/70">{s.body}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-20" data-reveal>
+      <p class="mb-5 text-[13px] font-semibold tracking-[.16em] text-white/50 uppercase">Trusted packaging for</p>
+      <ul class="flex flex-wrap gap-2.5">
+        {industries.map((ind) => (
+          <li class="flex items-center gap-2.5 rounded-full bg-white/[.07] py-2.5 pr-5 pl-2.5 text-[15px] font-semibold ring-1 ring-white/10">
+            <span class="grid size-9 place-items-center rounded-full bg-sun text-ink"><Icon name={ind.icon} class="size-[18px]" /></span>{ind.name}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>

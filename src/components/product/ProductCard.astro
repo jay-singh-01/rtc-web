@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+import Icon from "@/components/ui/Icon.astro";
+import { img } from "@/lib/images";
+import { materialById } from "@/content/taxonomy";
+import { isEco, searchText } from "@/lib/catalog";
+import type { Product } from "@/types";
+
+interface Props { product: Product; eager?: boolean; class?: string; filterable?: boolean; index?: number }
+const { product: p, eager = false, class: cls, filterable = false, index = 0 } = Astro.props;
+const m = materialById[p.material];
+const href = `/products/${p.slug}`;
+const sizes = "(min-width: 1280px) 290px, (min-width: 1024px) 23vw, (min-width: 640px) 31vw, 46vw";
+const count = p.options.length;
+---
+<article
+  class:list={["p-card group relative", cls]}
+  data-reveal
+  {...(filterable ? { "data-cat": p.category, "data-mat": p.material, "data-eco": isEco(p) ? "1" : "0", "data-feat": p.featured ? "1" : "0", "data-name": p.name.toLowerCase(), "data-text": searchText(p), "data-index": index } : {})}
+>
+  <div class="relative aspect-square overflow-hidden rounded-[24px] bg-cream ring-1 ring-line/60" data-tilt>
+    <a href={href} data-product-link class="absolute inset-0" aria-label={p.name}>
+      <Image src={img(p.images[0])} alt={p.name} widths={[240, 360, 520]} sizes={sizes} class="p-img-main absolute inset-0 size-full object-cover" loading={eager ? "eager" : "lazy"} />
+      {p.images[1] && <Image src={img(p.images[1])} alt="" widths={[240, 360, 520]} sizes={sizes} class="p-img-alt absolute inset-0 size-full object-cover" loading="lazy" />}
+    </a>
+    {m.eco && <span class="pill pill-eco pointer-events-none absolute top-3 left-3 shadow-sm"><Icon name="leaf" class="size-3" /> Eco</span>}
+    <button
+      type="button"
+      data-quick={p.slug}
+      class="absolute right-2.5 bottom-2.5 grid size-11 place-items-center rounded-full bg-white text-ink shadow-[0_6px_18px_-6px_rgba(0,0,0,.35)] transition duration-300 hover:rotate-90 hover:bg-brand hover:text-white active:scale-90 sm:size-12"
+      aria-label={`Add ${p.name} to enquiry list`}
+    ><Icon name="plus" class="size-[22px]" strokeWidth={2.2} /></button>
+  </div>
+  <a href={href} data-product-link class="block px-1 pt-3">
+    <p class="text-[12px] font-medium text-muted">{m.name}{p.category !== "dessert" && count > 1 && <> · {count} sizes</>}</p>
+    <h3 class="mt-0.5 font-sans text-[14.5px] leading-snug font-semibold text-ink transition group-hover:text-brand-600 sm:text-[15.5px]">{p.name}</h3>
+  </a>
+</article>

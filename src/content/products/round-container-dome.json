@@ -1,0 +1,59 @@
+{
+  "name": "Round Container with Dome Lid",
+  "category": "containers",
+  "material": "pp",
+  "description": "Black-base round containers with a high clear dome lid that shows off the food.",
+  "images": [
+    "../../assets/images/products/round-container-dome/images/0.jpg",
+    "../../assets/images/products/round-container-dome/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "100 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "250 gm",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "250 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "400 gm",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "500 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "750 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "1000 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "1500 ml",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [
+    "Black"
+  ],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 30
+}

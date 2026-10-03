@@ -1,0 +1,131 @@
+---
+import type { GetStaticPaths } from "astro";
+import { Image, getImage } from "astro:assets";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Icon from "@/components/ui/Icon.astro";
+import OptionPicker from "@/components/product/OptionPicker.astro";
+import ProductRail from "@/components/home/ProductRail.astro";
+import { products } from "@/lib/products";
+import { categoryById, materialById } from "@/content/taxonomy";
+import { relatedProducts } from "@/lib/catalog";
+import { img } from "@/lib/images";
+import { site, telHref, waHref } from "@/content/site";
+import type { Product } from "@/types";
+
+export const getStaticPaths = (() => products.map((p) => ({ params: { slug: p.slug }, props: { product: p } }))) satisfies GetStaticPaths;
+
+const { product: p } = Astro.props as { product: Product };
+const c = categoryById[p.category];
+const m = materialById[p.material];
+const related = relatedProducts(p);
+const hasSpecs = p.options.some((o) => o[0] || o[2]);
+const schemaImg = await getImage({ src: img(p.images[0]), width: 800, format: "jpg" });
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: p.name,
+  description: p.description,
+  category: c.name,
+  material: m.name,
+  brand: { "@type": "Brand", name: site.name },
+  sku: p.options.find((o) => o[0])?.[0],
+  image: new URL(schemaImg.src, Astro.site).href,
+  url: new URL(`/products/${p.slug}`, Astro.site).href,
+};
+---
+<BaseLayout title={p.name} description={`${p.name} — ${p.description} ${p.options.length > 1 ? `${p.options.length} sizes. ` : ""}Available at ${site.name}, Raichur.`} image={p.images[0]} active="products" hideBottomNav jsonLd={jsonLd}>
+  <div class="wrap pt-4 pb-10 sm:pt-6 lg:pb-16">
+    <nav class="mb-4 flex flex-wrap gap-2 text-[13px] text-muted" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-ink">Home</a><span aria-hidden="true">/</span>
+      <a href={`/category/${c.id}`} class="hover:text-ink">{c.name}</a><span aria-hidden="true">/</span>
+      <span class="truncate text-ink" aria-current="page">{p.name}</span>
+    </nav>
+
+    <div class="grid gap-8 lg:grid-cols-[1.05fr_1fr] lg:gap-14">
+      <!-- Gallery: swipe on phones, thumbnails on desktop -->
+      <div class="lg:sticky lg:top-28 lg:self-start" data-gallery>
+        <div class="relative -mx-4 sm:mx-0">
+          <div class="snap-row no-scrollbar gap-0! sm:gap-0!" data-gallery-track>
+            {p.images.map((name, i) => (
+              <div class="w-full flex-none px-4 sm:px-0">
+                <div class="aspect-square overflow-hidden rounded-[28px] bg-cream ring-1 ring-line/60">
+                  <Image src={img(name)} alt={i === 0 ? p.name : `${p.name} — photo ${i + 1}`} widths={[400, 640, 900]} sizes="(min-width:1024px) 600px, 100vw" class="size-full object-cover" loading={i === 0 ? "eager" : "lazy"} fetchpriority={i === 0 ? "high" : undefined} style={i === 0 ? "view-transition-name: product-hero" : undefined} />
+                </div>
+              </div>
+            ))}
+          </div>
+          {m.eco && <span class="pill pill-eco pointer-events-none absolute top-4 left-8 text-[12.5px] shadow sm:left-4"><Icon name="leaf" class="size-3.5" /> Eco-friendly</span>}
+        </div>
+        {p.images.length > 1 && (
+          <div class="mt-3 flex justify-center gap-2 sm:justify-start">
+            {p.images.map((name, i) => (
+              <button type="button" data-gallery-thumb={i} aria-label={`Show photo ${i + 1}`} aria-current={i === 0 ? "true" : "false"} class="size-2.5 overflow-hidden rounded-full bg-line transition-all aria-[current=true]:w-6 aria-[current=true]:bg-ink sm:size-20 sm:rounded-2xl sm:bg-cream sm:ring-1 sm:ring-line sm:aria-[current=true]:w-20 sm:aria-[current=true]:bg-cream sm:aria-[current=true]:ring-2 sm:aria-[current=true]:ring-brand">
+                <Image src={img(name)} alt="" width={160} height={160} class="hidden size-full object-cover sm:block" />
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+
+      <!-- Details -->
+      <div>
+        <div class="flex flex-wrap gap-2">
+          <a href={`/category/${c.id}`} class="pill pill-soft">{c.name}</a>
+          <a href={`/products?mat=${m.id}`} class:list={["pill", m.eco ? "pill-eco" : "pill-soft"]}>{m.eco && <Icon name="leaf" class="size-3" />}{m.name}</a>
+        </div>
+        <h1 class="mt-3 text-[clamp(30px,5vw,46px)] leading-[1.02] font-extrabold">{p.name}</h1>
+        <p class="mt-3 text-[16.5px] leading-relaxed text-ink-2">{p.description}</p>
+
+        {m.features && (
+          <ul class="mt-5 grid grid-cols-2 gap-2 sm:grid-cols-3">
+            {m.features.map((f) => <li class="flex items-center gap-2 rounded-2xl bg-eco-50 px-3 py-2.5 text-[13px] font-semibold text-[#1d5e40]"><Icon name={f.icon} class="size-[18px] flex-none" />{f.label}</li>)}
+          </ul>
+        )}
+
+        <div class="mt-7"><OptionPicker product={p} /></div>
+
+        <!-- Desktop actions (phones use the sticky bar below) -->
+        <div class="mt-7 hidden gap-3 lg:flex">
+          <button type="button" class="btn btn-brand flex-1 py-4 text-base" data-pd-add data-magnetic><Icon name="plus" /> Add to enquiry list</button>
+          <a href="#" target="_blank" rel="noopener" class="btn btn-wa flex-1 py-4 text-base" data-pd-wa><Icon name="whatsapp" /> Ask price on WhatsApp</a>
+        </div>
+
+        <div class="mt-6 flex items-center gap-3 rounded-[22px] bg-cream p-4 text-[14px] ring-1 ring-line">
+          <span class="grid size-11 flex-none place-items-center rounded-2xl bg-white text-brand-600"><Icon name="box" /></span>
+          <span>Need bulk quantities, custom printing or a size not listed? <a href={telHref} class="font-semibold text-brand-600 underline underline-offset-2">Call {site.phoneDisplay}</a></span>
+        </div>
+
+        {hasSpecs && (
+          <details class="group mt-6 rounded-[22px] ring-1 ring-line">
+            <summary class="flex cursor-pointer list-none items-center justify-between p-4 font-semibold">All sizes &amp; specifications <Icon name="right" class="size-5 rotate-90 transition group-open:-rotate-90" /></summary>
+            <div class="overflow-x-auto px-4 pb-4">
+              <table class="w-full text-left text-[14px]">
+                <thead class="text-[12px] tracking-wider text-muted uppercase"><tr><th class="py-2 pr-3 font-semibold">Code</th><th class="py-2 pr-3 font-semibold">Size</th>{p.options.some((o) => o[2]) && <th class="py-2 font-semibold">{p.dimLabel || "Dimensions"}</th>}</tr></thead>
+                <tbody class="divide-y divide-line">{p.options.map((o) => <tr><td class="py-2.5 pr-3 font-mono font-semibold">{o[0] || "—"}</td><td class="py-2.5 pr-3">{o[1]}</td>{p.options.some((x) => x[2]) && <td class="py-2.5">{o[2] || "—"}</td>}</tr>)}</tbody>
+              </table>
+            </div>
+          </details>
+        )}
+      </div>
+    </div>
+  </div>
+
+  {related.length > 0 && <ProductRail id="related" eyebrow="You may also need" title="Related products" products={related} tone="cream" href={`/category/${c.id}`} linkLabel={`More ${c.short.toLowerCase()}`} />}
+
+  <!-- Phone action bar -->
+  <div class="fixed inset-x-0 bottom-0 z-[60] lg:hidden">
+    <div class="mx-3 mb-[max(10px,env(safe-area-inset-bottom))] flex items-center gap-2 rounded-[26px] bg-ink/95 p-2 shadow-[0_18px_40px_-12px_rgba(0,0,0,.55)] ring-1 ring-white/10 backdrop-blur-xl">
+      <button type="button" data-sheet-open="sheet-enquiry" class="relative grid size-12 flex-none place-items-center rounded-2xl text-white" aria-label="Open enquiry list">
+        <span class="relative" data-list-target><Icon name="list" class="size-6" />
+          <span data-list-count hidden class="absolute -top-1.5 -right-3 grid h-[18px] min-w-[18px] place-items-center rounded-full bg-brand px-1 text-[10.5px] font-bold text-white ring-2 ring-ink">0</span>
+        </span>
+      </button>
+      <button type="button" class="btn btn-brand h-12 flex-1 rounded-2xl text-[15px]" data-pd-add><Icon name="plus" /> Add to list</button>
+      <a href={waHref(`Hi RTC, please share price for ${p.name}`)} target="_blank" rel="noopener" class="grid size-12 flex-none place-items-center rounded-2xl bg-wa text-white" data-pd-wa aria-label="Ask price on WhatsApp"><Icon name="whatsapp" class="size-6" /></a>
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  import "@/scripts/product-page";
+</script>

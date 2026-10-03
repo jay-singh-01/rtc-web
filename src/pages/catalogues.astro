@@ -1,0 +1,24 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import CatalogueGrid from "@/components/CatalogueGrid.astro";
+import Icon from "@/components/ui/Icon.astro";
+import { waHref } from "@/content/site";
+import { catalogues } from "@/lib/catalogues";
+---
+<BaseLayout title="Product catalogues (PDF)" description="Download RTC product catalogues — complete range, sugarcane bagasse, cornstarch, PET products and meal trays — with codes, sizes and dimensions." image={catalogues[0]?.cover ?? "hero-cover"} active="catalogues">
+  <section class="bg-cream">
+    <div class="wrap pt-8 pb-10 sm:pt-12 sm:pb-14">
+      <nav class="mb-4 flex gap-2 text-[13px] text-muted" aria-label="Breadcrumb"><a href="/" class="hover:text-ink">Home</a><span aria-hidden="true">/</span><span class="text-ink" aria-current="page">Catalogues</span></nav>
+      <h1 class="text-[clamp(34px,7vw,64px)] leading-[.98] font-extrabold" data-reveal>Catalogues</h1>
+      <p class="mt-3 max-w-xl text-[16px] text-ink-2" data-reveal>Every product code, size and dimension in PDF — view online, download, or share with your team.</p>
+    </div>
+  </section>
+  <section class="wrap py-10 sm:py-14">
+    <CatalogueGrid detailed />
+    <a href={waHref("Hi RTC, please send me your product catalogue.")} target="_blank" rel="noopener" class="mt-10 flex items-center gap-4 rounded-[24px] bg-[#e3f9eb] p-5 transition hover:ring-2 hover:ring-wa" data-reveal>
+      <span class="grid size-12 flex-none place-items-center rounded-2xl bg-wa text-white"><Icon name="whatsapp" class="size-6" /></span>
+      <span><b class="block">Prefer it on WhatsApp?</b><span class="text-[14px] text-ink-2">Ask us and we'll send the catalogue straight to your phone.</span></span>
+      <Icon name="arrow" class="ml-auto size-5 flex-none" />
+    </a>
+  </section>
+</BaseLayout>

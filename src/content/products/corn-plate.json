@@ -1,0 +1,47 @@
+{
+  "name": "Cornstarch Round Plate",
+  "category": "plates-bowls",
+  "material": "cornstarch",
+  "description": "Biodegradable cornstarch plates, plain and compartment. Microwave and freezer safe.",
+  "images": [
+    "../../assets/images/products/corn-plate/images/0.jpg",
+    "../../assets/images/products/corn-plate/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "6 no round plate",
+      "code": "7016",
+      "dims": "150/20"
+    },
+    {
+      "label": "10 no round plate",
+      "code": "7021",
+      "dims": "250/20"
+    },
+    {
+      "label": "10 no round plate – 3 CP",
+      "code": "7022",
+      "dims": "250/20"
+    },
+    {
+      "label": "11 no round plate – 4 CP",
+      "code": "7025",
+      "dims": "275/25"
+    },
+    {
+      "label": "12 no round plate",
+      "code": "7026",
+      "dims": "305/25"
+    },
+    {
+      "label": "12 no round plate – 4 CP",
+      "code": "7027",
+      "dims": "305/25"
+    }
+  ],
+  "dimLabel": "D/H",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 480
+}

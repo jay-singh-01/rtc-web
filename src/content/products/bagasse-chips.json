@@ -1,0 +1,22 @@
+{
+  "name": "Bagasse Chips Tray 7\" × 5\"",
+  "category": "plates-bowls",
+  "material": "bagasse",
+  "description": "Boat-style tray for chips, chaat and fries.",
+  "images": [
+    "../../assets/images/products/bagasse-chips/images/0.jpg",
+    "../../assets/images/products/bagasse-chips/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "Chips tray 7\" × 5\"",
+      "code": "DA46",
+      "dims": "176 × 132 × 30"
+    }
+  ],
+  "dimLabel": "L × W × H mm",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 450
+}

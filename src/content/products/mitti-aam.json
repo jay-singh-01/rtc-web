@@ -1,0 +1,21 @@
+{
+  "name": "Mitti Aam",
+  "category": "mitti",
+  "material": "clay",
+  "description": "Mango-shaped clay bowl.",
+  "images": [
+    "../../assets/images/products/mitti-aam/images/0.jpg"
+  ],
+  "options": [
+    {
+      "label": "Standard",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 1030
+}

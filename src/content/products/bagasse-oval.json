@@ -1,0 +1,22 @@
+{
+  "name": "Bagasse Oval Plate 12\" × 10\"",
+  "category": "plates-bowls",
+  "material": "bagasse",
+  "description": "Large oval platter for biryani, starters and buffets.",
+  "images": [
+    "../../assets/images/products/bagasse-oval/images/0.jpg",
+    "../../assets/images/products/bagasse-oval/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "12\" × 10\" oval plate",
+      "code": "DA16",
+      "dims": "318 × 255 × 22"
+    }
+  ],
+  "dimLabel": "L × W × H mm",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 440
+}

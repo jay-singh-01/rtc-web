@@ -1,0 +1,42 @@
+{
+  "name": "PET Round Hinged Box (Flat Lid)",
+  "category": "containers",
+  "material": "pet",
+  "description": "Round clear hinged boxes with flat lid — popular for sweets and bakery.",
+  "images": [
+    "../../assets/images/products/pet-round-fl/images/0.jpg",
+    "../../assets/images/products/pet-round-fl/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "250 ml – 8 oz",
+      "code": "1451",
+      "dims": "130/45"
+    },
+    {
+      "label": "350 ml – 12 oz",
+      "code": "1452",
+      "dims": "130/50"
+    },
+    {
+      "label": "600 ml – 20 oz",
+      "code": "1454",
+      "dims": "180/40"
+    },
+    {
+      "label": "750 ml – 24 oz",
+      "code": "1455",
+      "dims": "180/55"
+    },
+    {
+      "label": "1000 ml – 32 oz",
+      "code": "1456",
+      "dims": "180/65"
+    }
+  ],
+  "dimLabel": "D/H",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 210
+}

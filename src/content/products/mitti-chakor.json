@@ -1,0 +1,21 @@
+{
+  "name": "Mitti L-Chakor",
+  "category": "mitti",
+  "material": "clay",
+  "description": "Rectangular clay dish.",
+  "images": [
+    "../../assets/images/products/mitti-chakor/images/0.jpg"
+  ],
+  "options": [
+    {
+      "label": "Standard",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 1010
+}

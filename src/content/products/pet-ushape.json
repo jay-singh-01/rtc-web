@@ -1,0 +1,21 @@
+{
+  "name": "U-Shape Glass with Smart Sipper Lid",
+  "category": "cups",
+  "material": "pet",
+  "description": "U-shaped clear cup with smart sipper lid for bubble tea and juices.",
+  "images": [
+    "../../assets/images/products/pet-ushape/images/0.jpg"
+  ],
+  "options": [
+    {
+      "label": "Standard",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 600
+}

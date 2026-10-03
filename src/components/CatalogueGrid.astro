@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets";
+import Icon from "@/components/ui/Icon.astro";
+import { img } from "@/lib/images";
+import { catalogues, downloadName } from "@/lib/catalogues";
+
+interface Props { detailed?: boolean }
+const { detailed = false } = Astro.props;
+---
+<div class="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
+  {catalogues.map((c) => (
+    <article class="group flex flex-col overflow-hidden rounded-[24px] bg-white ring-1 ring-line transition hover:-translate-y-1 hover:shadow-xl" data-reveal>
+      <a href={c.pdf} target="_blank" rel="noopener" class="relative block aspect-[3/4] overflow-hidden bg-cream" data-tilt>
+        <Image src={img(c.cover)} alt={`${c.title} cover`} widths={[260, 400]} sizes="(min-width:1024px) 290px, 46vw" class="size-full object-cover object-top transition duration-700 group-hover:scale-105" />
+        <span class="absolute top-3 left-3 rounded-full bg-ink/85 px-2.5 py-1 text-[11px] font-bold text-white backdrop-blur">PDF · {c.pages} pages</span>
+      </a>
+      <div class="flex flex-1 flex-col p-3.5 sm:p-4">
+        <h3 class="font-sans text-[14.5px] leading-snug font-bold sm:text-[16px]">{c.title}</h3>
+        {detailed && c.description && <p class="mt-1 text-[13px] text-muted">{c.description}</p>}
+        <p class="mt-1 text-[12px] text-muted">{c.size}</p>
+        <div class="mt-auto flex gap-2 pt-3">
+          <a href={c.pdf} target="_blank" rel="noopener" class="btn btn-ghost btn-sm flex-1 px-2"><Icon name="eye" class="size-4" /> View</a>
+          <a href={c.pdf} download={downloadName(c)} class="btn btn-brand btn-sm flex-1 px-2" aria-label={`Download ${c.title}`}><Icon name="download" class="size-4" /><span class="max-sm:hidden">Download</span></a>
+        </div>
+      </div>
+    </article>
+  ))}
+</div>

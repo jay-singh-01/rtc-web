@@ -1,0 +1,21 @@
+{
+  "name": "Tall Tumbler Cup (D-26)",
+  "category": "dessert",
+  "material": "ps",
+  "description": "Premium PS acrylic serveware with a glass-like finish — for desserts, mithai, starters and buffets.",
+  "images": [
+    "../../assets/images/products/ps-d-26/images/0.jpg"
+  ],
+  "options": [
+    {
+      "label": "Tall Tumbler Cup",
+      "code": "D-26",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 810
+}

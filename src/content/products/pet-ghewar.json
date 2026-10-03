@@ -1,0 +1,26 @@
+{
+  "name": "PET Kharra & Ghewar Box",
+  "category": "containers",
+  "material": "pet",
+  "description": "Round hinged boxes sized for kharra and ghewar.",
+  "images": [
+    "../../assets/images/products/pet-ghewar/images/0.jpg"
+  ],
+  "options": [
+    {
+      "label": "34 oz flat lid – Kharra box",
+      "code": "1457",
+      "dims": "130/55"
+    },
+    {
+      "label": "255 dia round – Ghewar big (2 pcs)",
+      "code": "1472",
+      "dims": "255/75"
+    }
+  ],
+  "dimLabel": "D/H",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 230
+}

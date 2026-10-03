@@ -1,0 +1,31 @@
+{
+  "name": "Sipper Lid",
+  "category": "cups",
+  "material": "pp",
+  "description": "Black sipper lids for ripple and double-wall paper cups.",
+  "images": [
+    "../../assets/images/products/sipper-lid/images/0.jpg"
+  ],
+  "options": [
+    {
+      "label": "70 dia",
+      "code": "",
+      "dims": "200 ml cup"
+    },
+    {
+      "label": "80 dia",
+      "code": "",
+      "dims": "250 ml cup"
+    },
+    {
+      "label": "90 dia",
+      "code": "",
+      "dims": "300 ml cup"
+    }
+  ],
+  "dimLabel": "Fits",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 660
+}

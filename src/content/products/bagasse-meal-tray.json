@@ -1,0 +1,27 @@
+{
+  "name": "Bagasse Compartment Meal Tray",
+  "category": "meal-trays",
+  "material": "bagasse",
+  "description": "Compostable sugarcane meal trays — 5 compartment with lid and 6 compartment open tray.",
+  "images": [
+    "../../assets/images/products/bagasse-meal-tray/images/0.jpg",
+    "../../assets/images/products/bagasse-meal-tray/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "5 compartment meal tray",
+      "code": "DA10",
+      "dims": "280 × 219"
+    },
+    {
+      "label": "6 compartment meal tray",
+      "code": "DA42",
+      "dims": "280 × 220"
+    }
+  ],
+  "dimLabel": "Size mm",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 370
+}

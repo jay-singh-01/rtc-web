@@ -1,0 +1,26 @@
+{
+  "name": "PET Heart Hinged Box",
+  "category": "containers",
+  "material": "pet",
+  "description": "Heart-shaped clear boxes for chocolates, cakes and festive gifting.",
+  "images": [
+    "../../assets/images/products/pet-heart/images/0.jpg"
+  ],
+  "options": [
+    {
+      "label": "Small",
+      "code": "1635",
+      "dims": "150/140/40"
+    },
+    {
+      "label": "Large",
+      "code": "1636",
+      "dims": "190/170/58"
+    }
+  ],
+  "dimLabel": "L/W/H",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 250
+}

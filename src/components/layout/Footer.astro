@@ -1,0 +1,66 @@
+---
+import { Image } from "astro:assets";
+import Icon from "@/components/ui/Icon.astro";
+import { img } from "@/lib/images";
+import { categories, materials } from "@/content/taxonomy";
+import { addressText, instagramHref, mailHref, mapsHref, site, telHref, waHref } from "@/content/site";
+---
+<footer class="relative overflow-hidden bg-ink pb-32 text-white/75 lg:pb-10">
+  <!-- Big closing CTA -->
+  <div class="wrap pt-20 pb-14">
+    <div class="flex flex-col items-start justify-between gap-8 border-b border-white/10 pb-14 lg:flex-row lg:items-end">
+      <h2 class="max-w-3xl text-[clamp(38px,8vw,92px)] leading-[.92] font-extrabold text-white" data-reveal>
+        Let's pack<br />something <span class="text-brand">great.</span>
+      </h2>
+      <div class="flex flex-wrap gap-3" data-reveal>
+        <a href={waHref()} target="_blank" rel="noopener" class="btn btn-wa px-7 py-4 text-base" data-magnetic><Icon name="whatsapp" /> Chat on WhatsApp</a>
+        <a href={telHref} class="btn bg-white/10 px-7 py-4 text-base text-white hover:bg-white/20" data-magnetic><Icon name="phone" /> {site.phoneDisplay}</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.3fr]">
+    <div>
+      <div class="mb-4 flex items-center gap-3">
+        <Image src={img("logo")} alt="" width={96} height={96} class="size-12 rounded-full" />
+        <span class="font-display text-lg font-extrabold text-white">{site.name}</span>
+      </div>
+      <p class="max-w-sm text-[14.5px]">Raichur's one-stop shop for disposable food packaging — containers, meal trays, plates, cups and eco-friendly sugarcane &amp; cornstarch tableware.</p>
+      <div class="mt-5 flex gap-2.5">
+        {[
+          { href: waHref(), icon: "whatsapp" as const, label: "WhatsApp" },
+          { href: instagramHref, icon: "instagram" as const, label: "Instagram" },
+          { href: mailHref, icon: "mail" as const, label: "Email" },
+          { href: telHref, icon: "phone" as const, label: "Call" },
+        ].map((s) => (
+          <a href={s.href} target={s.href.startsWith("http") ? "_blank" : undefined} rel="noopener" aria-label={s.label} class="grid size-11 place-items-center rounded-full bg-white/10 text-white transition hover:-translate-y-1 hover:bg-brand"><Icon name={s.icon} class="size-[18px]" /></a>
+        ))}
+      </div>
+    </div>
+    <div>
+      <h3 class="mb-4 font-sans text-[15px] font-bold text-white">Shop by category</h3>
+      <ul class="grid gap-2.5 text-[14.5px]">{categories.map((c) => <li><a class="transition hover:text-sun" href={`/category/${c.id}`}>{c.name}</a></li>)}</ul>
+    </div>
+    <div>
+      <h3 class="mb-4 font-sans text-[15px] font-bold text-white">Shop by material</h3>
+      <ul class="grid gap-2.5 text-[14.5px]">{materials.map((m) => <li><a class="transition hover:text-sun" href={`/products?mat=${m.id}`}>{m.name}</a></li>)}</ul>
+    </div>
+    <div>
+      <h3 class="mb-4 font-sans text-[15px] font-bold text-white">Visit or reach us</h3>
+      <ul class="grid gap-3.5 text-[14.5px]">
+        <li class="flex gap-3"><Icon name="pin" class="mt-0.5 size-[18px] flex-none text-sun" /><a href={mapsHref} target="_blank" rel="noopener" class="hover:text-sun">{addressText}</a></li>
+        <li class="flex gap-3"><Icon name="phone" class="mt-0.5 size-[18px] flex-none text-sun" /><a href={telHref} class="hover:text-sun">{site.phoneDisplay}</a></li>
+        <li class="flex gap-3"><Icon name="mail" class="mt-0.5 size-[18px] flex-none text-sun" /><a href={mailHref} class="hover:text-sun">{site.email}</a></li>
+        <li class="flex gap-3"><Icon name="instagram" class="mt-0.5 size-[18px] flex-none text-sun" /><a href={instagramHref} target="_blank" rel="noopener" class="hover:text-sun">@{site.instagram}</a></li>
+        {site.hours && <li class="flex gap-3"><Icon name="clock" class="mt-0.5 size-[18px] flex-none text-sun" />{site.hours}</li>}
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap mt-14 flex flex-col gap-2 border-t border-white/10 pt-6 text-[12.5px] text-white/50 sm:flex-row sm:justify-between">
+    <span>© {new Date().getFullYear()} {site.name}, Raichur.</span>
+    <span>Product images are representative. Please confirm sizes &amp; availability while ordering.</span>
+  </div>
+  <!-- Giant watermark -->
+  <p class="pointer-events-none absolute -bottom-[0.18em] left-1/2 -translate-x-1/2 font-display text-[28vw] leading-none font-extrabold text-white/[.03] select-none lg:text-[22vw]" aria-hidden="true">rtc</p>
+</footer>

@@ -1,0 +1,48 @@
+{
+  "name": "Paper Straws",
+  "category": "straws",
+  "material": "paper",
+  "description": "FSC-certified, compostable paper straws in stripe, arrow, star and plain designs. 197 mm long.",
+  "images": [
+    "../../assets/images/products/paper-straws/images/0.jpg",
+    "../../assets/images/products/paper-straws/images/1.jpg",
+    "../../assets/images/products/paper-straws/images/2.jpg"
+  ],
+  "options": [
+    {
+      "label": "5 mm",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "6 mm",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "8 mm",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "10 mm",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "12 mm",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [
+    "Stripe",
+    "Arrow",
+    "Star",
+    "Plain"
+  ],
+  "colorLabel": "Design",
+  "featured": true,
+  "sortOrder": 1140
+}

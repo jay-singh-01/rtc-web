@@ -1,0 +1,27 @@
+{
+  "name": "Bagasse Square Plate",
+  "category": "plates-bowls",
+  "material": "bagasse",
+  "description": "Square sugarcane plates, plain and 3 compartment.",
+  "images": [
+    "../../assets/images/products/bagasse-square-plate/images/0.jpg",
+    "../../assets/images/products/bagasse-square-plate/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "9\" square plate",
+      "code": "DA35",
+      "dims": "200 × 200 × 22"
+    },
+    {
+      "label": "10\" 3 compartment square plate",
+      "code": "DA45",
+      "dims": "220 × 220 × 25"
+    }
+  ],
+  "dimLabel": "L × W × H mm",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 420
+}

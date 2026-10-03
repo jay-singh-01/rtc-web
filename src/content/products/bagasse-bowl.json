@@ -1,0 +1,42 @@
+{
+  "name": "Bagasse Round Bowl",
+  "category": "plates-bowls",
+  "material": "bagasse",
+  "description": "Compostable sugarcane bowls from 4 oz to 16 oz for sambar, desserts and soups.",
+  "images": [
+    "../../assets/images/products/bagasse-bowl/images/0.jpg",
+    "../../assets/images/products/bagasse-bowl/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "100 ml / 4 oz (lid available)",
+      "code": "DA22",
+      "dims": "85 × 40"
+    },
+    {
+      "label": "180 ml / 6 oz",
+      "code": "DA01",
+      "dims": "107 × 40"
+    },
+    {
+      "label": "240 ml / 8 oz",
+      "code": "DA02",
+      "dims": "113 × 42"
+    },
+    {
+      "label": "12 oz bowl",
+      "code": "DA28",
+      "dims": "160 × 40"
+    },
+    {
+      "label": "16 oz bowl",
+      "code": "DA38",
+      "dims": "175 × 41"
+    }
+  ],
+  "dimLabel": "Dia × H mm",
+  "colors": [],
+  "colorLabel": "",
+  "featured": true,
+  "sortOrder": 460
+}

@@ -1,0 +1,37 @@
+{
+  "name": "Bagasse Compartment Round Plate",
+  "category": "plates-bowls",
+  "material": "bagasse",
+  "description": "3 and 4 compartment sugarcane plates — perfect for South Indian breakfasts, meals and events.",
+  "images": [
+    "../../assets/images/products/bagasse-cp-plate/images/0.jpg",
+    "../../assets/images/products/bagasse-cp-plate/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "9\" 3 compartment",
+      "code": "DA19",
+      "dims": "230 × 20"
+    },
+    {
+      "label": "10\" 3 compartment",
+      "code": "DA08",
+      "dims": "260 × 25"
+    },
+    {
+      "label": "11\" 4 compartment",
+      "code": "DA09",
+      "dims": "275 × 27"
+    },
+    {
+      "label": "12\" 4 compartment",
+      "code": "DA18",
+      "dims": "295 × 280"
+    }
+  ],
+  "dimLabel": "Dia × H mm",
+  "colors": [],
+  "colorLabel": "",
+  "featured": true,
+  "sortOrder": 400
+}

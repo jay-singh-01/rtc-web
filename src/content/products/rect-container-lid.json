@@ -1,0 +1,45 @@
+{
+  "name": "Rectangular Container with Lid",
+  "category": "containers",
+  "material": "pp",
+  "description": "Stackable rectangular containers for meals, rice and snacks. Strong walls and a snug lid for delivery.",
+  "images": [
+    "../../assets/images/products/rect-container-lid/images/0.jpg",
+    "../../assets/images/products/rect-container-lid/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "250 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "500 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "750 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "1000 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "1500 ml",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [
+    "Black",
+    "Natural"
+  ],
+  "colorLabel": "",
+  "featured": true,
+  "sortOrder": 20
+}

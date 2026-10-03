@@ -1,0 +1,21 @@
+{
+  "name": "Mitti Pot H-16",
+  "category": "mitti",
+  "material": "clay",
+  "description": "Decorative clay pot, 100 ml.",
+  "images": [
+    "../../assets/images/products/mitti-h16/images/0.jpg"
+  ],
+  "options": [
+    {
+      "label": "100 ml",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 1040
+}

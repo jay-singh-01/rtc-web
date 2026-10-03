@@ -1,0 +1,24 @@
+---
+import Icon from "@/components/ui/Icon.astro";
+import { waHref } from "@/content/site";
+
+interface Props { active?: string }
+const { active } = Astro.props;
+const item = "flex flex-1 flex-col items-center justify-center gap-1 py-1.5 text-[11px] font-semibold transition active:scale-90";
+---
+<!-- Phone-only bottom navigation: everything within thumb reach. -->
+<nav class="fixed inset-x-0 bottom-0 z-[60] lg:hidden" aria-label="Quick navigation" style="view-transition-name: bottom-nav">
+  <div class="mx-3 mb-[max(10px,env(safe-area-inset-bottom))] flex items-stretch rounded-[26px] bg-ink/95 px-1.5 py-1 text-white/70 shadow-[0_18px_40px_-12px_rgba(0,0,0,.55)] ring-1 ring-white/10 backdrop-blur-xl">
+    <a href="/" class:list={[item, active === "home" && "text-white"]}><Icon name="home" class="size-[22px]" />Home</a>
+    <button type="button" data-sheet-open="sheet-menu" class:list={[item, (active === "products") && "text-white"]}><Icon name="grid" class="size-[22px]" />Shop</button>
+    <button type="button" data-sheet-open="sheet-search" class={item}><Icon name="search" class="size-[22px]" />Search</button>
+    <button type="button" data-sheet-open="sheet-enquiry" class={item} aria-label="Enquiry list">
+      <span class="relative" data-list-target><Icon name="list" class="size-[22px]" />
+        <span data-list-count hidden class="absolute -top-1.5 -right-3 grid h-[18px] min-w-[18px] place-items-center rounded-full bg-brand px-1 text-[10.5px] font-bold text-white ring-2 ring-ink">0</span>
+      </span>My list
+    </button>
+    <a href={waHref()} target="_blank" rel="noopener" class={item}>
+      <span class="grid size-[26px] place-items-center rounded-full bg-wa text-white"><Icon name="whatsapp" class="size-[17px]" /></span>Chat
+    </a>
+  </div>
+</nav>

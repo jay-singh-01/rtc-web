@@ -1,0 +1,37 @@
+{
+  "name": "PET Sipper Glass with Black Lid",
+  "category": "cups",
+  "material": "pet",
+  "description": "Clear PET glasses with black sipper lid for cold coffee, shakes and boba.",
+  "images": [
+    "../../assets/images/products/pet-sipper-glass/images/0.jpg",
+    "../../assets/images/products/pet-sipper-glass/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "200 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "250 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "300 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "350 ml",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": true,
+  "sortOrder": 560
+}

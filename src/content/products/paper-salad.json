@@ -1,0 +1,42 @@
+{
+  "name": "Paper Round Salad Container with Lid",
+  "category": "containers",
+  "material": "paper",
+  "description": "Kraft paper bowls with a clear PET lid for salads, poke bowls and fruit.",
+  "images": [
+    "../../assets/images/products/paper-salad/images/0.jpg",
+    "../../assets/images/products/paper-salad/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "250 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "350 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "500 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "750 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "1000 ml",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 80
+}

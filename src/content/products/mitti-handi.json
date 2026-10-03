@@ -1,0 +1,32 @@
+{
+  "name": "Mitti Handi",
+  "category": "mitti",
+  "material": "clay",
+  "description": "Small clay handis for biryani, phirni and rabdi.",
+  "images": [
+    "../../assets/images/products/mitti-handi/images/0.jpg",
+    "../../assets/images/products/mitti-handi/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "H-18 – 80 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "H-16 – 100 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "H-13 – 150 ml",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 980
+}

@@ -1,0 +1,21 @@
+{
+  "name": "PET 3 CP Dry-fruit Round Box",
+  "category": "containers",
+  "material": "pet",
+  "description": "Three-compartment round hinged box for dry fruits and gifting.",
+  "images": [
+    "../../assets/images/products/pet-dryfruit/images/0.jpg"
+  ],
+  "options": [
+    {
+      "label": "Hinged round – 3 CP dry-fruit",
+      "code": "1391",
+      "dims": "170/40"
+    }
+  ],
+  "dimLabel": "D/H",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 240
+}

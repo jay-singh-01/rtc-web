@@ -1,0 +1,32 @@
+{
+  "name": "Bagasse Compartment Clamshell",
+  "category": "takeaway",
+  "material": "bagasse",
+  "description": "2 and 3 compartment clamshells to keep curries and rice apart.",
+  "images": [
+    "../../assets/images/products/bagasse-cp-clamshell/images/0.jpg",
+    "../../assets/images/products/bagasse-cp-clamshell/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "9\" × 6\" 2 CP clamshell",
+      "code": "DA31",
+      "dims": "9 × 6 inch"
+    },
+    {
+      "label": "8\" × 8\" 3 CP clamshell",
+      "code": "DA47",
+      "dims": "8 × 8 inch"
+    },
+    {
+      "label": "9\" × 9\" 3 CP clamshell",
+      "code": "DA17",
+      "dims": "9 × 9 inch"
+    }
+  ],
+  "dimLabel": "Size",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 540
+}

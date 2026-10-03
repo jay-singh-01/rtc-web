@@ -1,0 +1,26 @@
+{
+  "name": "PET Bowl",
+  "category": "plates-bowls",
+  "material": "pet",
+  "description": "Clear ribbed PET bowl for desserts, fruit and salads.",
+  "images": [
+    "../../assets/images/products/pet-ribbed-bowl/images/0.jpg"
+  ],
+  "options": [
+    {
+      "label": "180 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "240 ml",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 500
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Umbrella Bend Straws",
+  "category": "straws",
+  "material": "pp",
+  "description": "Bendy straws with a paper umbrella — a party favourite.",
+  "images": [
+    "../../assets/images/products/umbrella-bend-straw/images/0.jpg",
+    "../../assets/images/products/umbrella-bend-straw/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "Standard",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 1160
+}

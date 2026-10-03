@@ -1,0 +1,68 @@
+{
+  "name": "PET Hi-Lid Hinged Box",
+  "category": "containers",
+  "material": "pet",
+  "description": "Hinged PET boxes with a raised lid for cakes, pastries and tall sweets.",
+  "images": [
+    "../../assets/images/products/pet-hilid/images/0.jpg",
+    "../../assets/images/products/pet-hilid/images/1.jpg",
+    "../../assets/images/products/pet-hilid/images/2.jpg"
+  ],
+  "options": [
+    {
+      "label": "250 ml",
+      "code": "1421A",
+      "dims": "115/130/50"
+    },
+    {
+      "label": "375 ml",
+      "code": "1422A",
+      "dims": "115/130/60"
+    },
+    {
+      "label": "500 ml",
+      "code": "1423A",
+      "dims": "115/130/70"
+    },
+    {
+      "label": "600 ml",
+      "code": "1427A",
+      "dims": "180/130/67"
+    },
+    {
+      "label": "750 ml",
+      "code": "1428A",
+      "dims": "180/130/74"
+    },
+    {
+      "label": "1000 ml",
+      "code": "1429A",
+      "dims": "180/130/92"
+    },
+    {
+      "label": "1250 ml",
+      "code": "1431A",
+      "dims": "230/180/75"
+    },
+    {
+      "label": "1500 ml",
+      "code": "1432A",
+      "dims": "230/180/85"
+    },
+    {
+      "label": "2000 ml",
+      "code": "1433A",
+      "dims": "230/180/98"
+    },
+    {
+      "label": "2250 ml",
+      "code": "1434A",
+      "dims": "230/180/115"
+    }
+  ],
+  "dimLabel": "L/W/H",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 180
+}

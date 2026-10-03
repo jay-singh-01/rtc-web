@@ -1,0 +1,28 @@
+{
+  "name": "PET Pan Wati Hinged Box",
+  "category": "containers",
+  "material": "pet",
+  "description": "Small hinged dome boxes for paan, sweets and single servings.",
+  "images": [
+    "../../assets/images/products/pet-panwati/images/0.jpg",
+    "../../assets/images/products/pet-panwati/images/1.jpg",
+    "../../assets/images/products/pet-panwati/images/2.jpg"
+  ],
+  "options": [
+    {
+      "label": "Pan wati small",
+      "code": "1411",
+      "dims": "80/60/30"
+    },
+    {
+      "label": "Pan wati big",
+      "code": "1412",
+      "dims": "80/80/35"
+    }
+  ],
+  "dimLabel": "L/W/H",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 260
+}

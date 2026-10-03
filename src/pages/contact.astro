@@ -1,0 +1,70 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import VisitUs from "@/components/VisitUs.astro";
+import Icon from "@/components/ui/Icon.astro";
+import { site } from "@/content/site";
+---
+<BaseLayout title="Contact us" description={`Contact ${site.name}, Gunj Road, Raichur — call or WhatsApp ${site.phoneDisplay}, email ${site.email}.`} active="contact">
+  <section class="bg-cream">
+    <div class="wrap pt-8 pb-10 sm:pt-12 sm:pb-14">
+      <nav class="mb-4 flex gap-2 text-[13px] text-muted" aria-label="Breadcrumb"><a href="/" class="hover:text-ink">Home</a><span aria-hidden="true">/</span><span class="text-ink" aria-current="page">Contact</span></nav>
+      <h1 class="text-[clamp(34px,7vw,64px)] leading-[.98] font-extrabold" data-reveal>Let's talk packaging.</h1>
+      <p class="mt-3 max-w-xl text-[16px] text-ink-2" data-reveal>Questions, bulk orders or custom printing — WhatsApp is the fastest way to reach us.</p>
+    </div>
+  </section>
+
+  <section class="wrap py-10 sm:py-14"><VisitUs /></section>
+
+  <section class="wrap pb-20">
+    <div class="mx-auto max-w-2xl rounded-[32px] bg-white p-6 ring-1 ring-line sm:p-10" data-reveal>
+      <h2 class="text-[28px]">Send us a message</h2>
+      <p class="mt-1 text-muted">We'll reply by phone or email.</p>
+      <form id="contact-form" class="mt-6 grid gap-4 sm:grid-cols-2" novalidate>
+        <div><label class="label" for="c-name">Name *</label><input class="field" id="c-name" name="name" autocomplete="name" required /></div>
+        <div><label class="label" for="c-phone">Phone / WhatsApp *</label><input class="field" id="c-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required /></div>
+        <div><label class="label" for="c-email">Email</label><input class="field" id="c-email" name="email" type="email" autocomplete="email" /></div>
+        <div><label class="label" for="c-business">Business name</label><input class="field" id="c-business" name="business" autocomplete="organization" /></div>
+        <div class="sm:col-span-2"><label class="label" for="c-note">Message *</label><textarea class="field min-h-32 resize-y" id="c-note" name="note" required placeholder="What products and quantities do you need?"></textarea></div>
+        <input name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="absolute -left-[9999px]" />
+        <p id="contact-status" class="hidden rounded-2xl px-4 py-3 text-[14px] sm:col-span-2" role="status"></p>
+        <button type="submit" class="btn btn-brand py-4 text-base sm:col-span-2"><Icon name="send" /> Send message</button>
+      </form>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  import { PHONE_RE } from "@/lib/enquiry-message";
+  import { site } from "@/content/site";
+
+  const form = document.getElementById("contact-form") as HTMLFormElement;
+  const status = document.getElementById("contact-status")!;
+  const show = (html: string, ok: boolean) => {
+    status.className = `rounded-2xl px-4 py-3 text-[14px] sm:col-span-2 ${ok ? "bg-eco-50 text-eco" : "bg-red-50 text-red-700"}`;
+    status.innerHTML = html;
+  };
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const d = Object.fromEntries(new FormData(form)) as Record<string, string>;
+    if (!d.name?.trim() || !PHONE_RE.test(d.phone?.trim() ?? "") || !d.note?.trim()) {
+      show("Please enter your name, a valid phone number and a message.", false);
+      return;
+    }
+    const btn = form.querySelector("button[type=submit]") as HTMLButtonElement;
+    btn.disabled = true;
+    const label = btn.innerHTML;
+    btn.textContent = "Sending…";
+    let ok = false;
+    try {
+      const r = await fetch("/api/enquiry", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...d, type: "contact" }) });
+      ok = r.ok && (await r.json()).ok === true;
+    } catch { /* offline or no server */ }
+    btn.disabled = false;
+    btn.innerHTML = label;
+    if (ok) { form.reset(); show("Thanks! Your message has been sent — we'll get back to you soon.", true); }
+    else {
+      const wa = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(`Hi RTC, I'm ${d.name} (${d.phone}). ${d.note}`)}`;
+      show(`Couldn't send right now. <a class="font-semibold underline" target="_blank" rel="noopener" href="${wa}">Send it on WhatsApp instead →</a>`, false);
+    }
+  });
+</script>

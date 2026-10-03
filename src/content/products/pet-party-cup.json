@@ -1,0 +1,28 @@
+{
+  "name": "PET Premium Party Cups",
+  "category": "cups",
+  "material": "pet",
+  "description": "Bright, sturdy 350 ml party cups.",
+  "images": [
+    "../../assets/images/products/pet-party-cup/images/0.jpg",
+    "../../assets/images/products/pet-party-cup/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "350 ml",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [
+    "Red",
+    "Blue",
+    "Pink",
+    "Green",
+    "Purple"
+  ],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 590
+}

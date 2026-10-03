@@ -1,0 +1,32 @@
+{
+  "name": "Bagasse Lunch & Bio Box",
+  "category": "takeaway",
+  "material": "bagasse",
+  "description": "Hinged sugarcane lunch boxes for meals, snacks and sandwiches.",
+  "images": [
+    "../../assets/images/products/bagasse-lunch-box/images/0.jpg",
+    "../../assets/images/products/bagasse-lunch-box/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "7\" × 5\" 600 ml lunch box",
+      "code": "DA30",
+      "dims": "7 × 5 inch"
+    },
+    {
+      "label": "7\" × 5\" small bio box",
+      "code": "DA43",
+      "dims": "7 × 5 inch"
+    },
+    {
+      "label": "9\" × 6\" medium bio box",
+      "code": "DA44",
+      "dims": "9 × 6 inch"
+    }
+  ],
+  "dimLabel": "Size",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 550
+}

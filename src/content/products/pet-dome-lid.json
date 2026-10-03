@@ -1,0 +1,26 @@
+{
+  "name": "PET Dome Lid",
+  "category": "cups",
+  "material": "pet",
+  "description": "Clear dome lids for PET glasses and bowls.",
+  "images": [
+    "../../assets/images/products/pet-dome-lid/images/0.jpg"
+  ],
+  "options": [
+    {
+      "label": "80 dia",
+      "code": "",
+      "dims": "250 ml"
+    },
+    {
+      "label": "95 dia",
+      "code": "",
+      "dims": "300 ml"
+    }
+  ],
+  "dimLabel": "Fits",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 670
+}

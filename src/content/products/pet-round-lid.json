@@ -1,0 +1,32 @@
+{
+  "name": "PET Round Container with Lid",
+  "category": "containers",
+  "material": "pet",
+  "description": "Clear round deli containers with lid for chutneys, desserts and dry snacks.",
+  "images": [
+    "../../assets/images/products/pet-round-lid/images/0.jpg",
+    "../../assets/images/products/pet-round-lid/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "250 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "375 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "500 ml",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 290
+}

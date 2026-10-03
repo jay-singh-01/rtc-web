@@ -1,0 +1,32 @@
+{
+  "name": "BBQ Grilling Bamboo Sticks",
+  "category": "wooden",
+  "material": "wood",
+  "description": "Bamboo skewers for kebabs, tikka and grilling.",
+  "images": [
+    "../../assets/images/products/bbq-bamboo/images/0.jpg",
+    "../../assets/images/products/bbq-bamboo/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "6 inch",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "8 inch",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "10 inch",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 1100
+}

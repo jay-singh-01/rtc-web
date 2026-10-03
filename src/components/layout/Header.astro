@@ -1,0 +1,89 @@
+---
+import { Image } from "astro:assets";
+import Icon from "@/components/ui/Icon.astro";
+import { img } from "@/lib/images";
+import { categories } from "@/content/taxonomy";
+import { site, telHref, waHref } from "@/content/site";
+
+interface Props { active?: string }
+const { active } = Astro.props;
+const ticker = [
+  "🌿 Compostable sugarcane & cornstarch range",
+  "📦 Wholesale & retail",
+  "📍 Gunj Road, Raichur",
+  "💬 Bulk prices on WhatsApp",
+  "🖨️ Custom printing available",
+  "🥤 Cups, glasses & lids",
+  "🍱 Meal trays for cloud kitchens",
+];
+const nav = [
+  { href: "/products?eco=1", label: "Eco-friendly", key: "eco" },
+  { href: "/catalogues", label: "Catalogues", key: "catalogues" },
+  { href: "/contact", label: "Contact", key: "contact" },
+];
+---
+<div class="relative z-[51] overflow-hidden bg-ink text-[12.5px] font-medium text-white/90">
+  <div class="flex w-max animate-marquee py-2 hover:[animation-play-state:paused]" aria-hidden="true">
+    {[0, 1].map(() => (
+      <div class="flex shrink-0">
+        {ticker.map((t) => <span class="px-6 whitespace-nowrap">{t}</span>)}
+      </div>
+    ))}
+  </div>
+  <p class="sr-only">Wholesale and retail disposable packaging in Raichur. Bulk prices on WhatsApp.</p>
+</div>
+
+<header class="site-header sticky top-0 z-50 border-b border-line/70 bg-white/85 backdrop-blur-xl backdrop-saturate-150" style="view-transition-name: site-header">
+  <div class="wrap flex h-16 items-center gap-3 lg:h-[76px] lg:gap-6">
+    <a href="/" class="flex items-center gap-2.5" aria-label={`${site.name} — home`}>
+      <Image src={img("logo")} alt="" width={52} height={52} class="size-10 rounded-full shadow-sm lg:size-12" loading="eager" />
+      <span class="leading-none">
+        <span class="block font-display text-[17px] font-extrabold tracking-tight whitespace-nowrap lg:text-[19px]">{site.name}</span>
+        <span class="mt-1 hidden text-[12px] whitespace-nowrap text-muted sm:block lg:hidden xl:block">{site.tagline} · Raichur</span>
+      </span>
+    </a>
+
+    <!-- Desktop navigation -->
+    <nav class="ml-2 hidden items-center gap-0.5 whitespace-nowrap lg:flex xl:ml-4" aria-label="Main">
+      <div class="group relative">
+        <a href="/products" class:list={["flex items-center gap-1 rounded-full px-4 py-2 text-[15px] font-semibold transition hover:bg-cream", active === "products" && "text-brand-600"]}>
+          Shop <Icon name="right" class="size-4 rotate-90 transition group-hover:-rotate-90" />
+        </a>
+        <!-- Mega menu -->
+        <div class="invisible absolute top-full left-0 pt-3 opacity-0 transition duration-300 group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100">
+          <div class="grid w-[720px] grid-cols-3 gap-2 rounded-3xl bg-white p-3 shadow-2xl ring-1 ring-line">
+            {categories.map((c) => (
+              <a href={`/category/${c.id}`} class="group/item flex items-center gap-3 rounded-2xl p-2 transition hover:bg-cream">
+                <Image src={img(c.image)} alt="" width={112} height={112} class="size-14 rounded-xl object-cover transition duration-500 group-hover/item:scale-110" />
+                <span class="text-[14px] leading-tight font-semibold">{c.name}</span>
+              </a>
+            ))}
+            <a href="/products" class="col-span-3 mt-1 flex items-center justify-between rounded-2xl bg-ink px-5 py-3.5 text-white">
+              <span class="font-semibold">Browse all products</span><Icon name="arrow" />
+            </a>
+          </div>
+        </div>
+      </div>
+      {nav.map((n) => (
+        <a href={n.href} class:list={["rounded-full px-4 py-2 text-[15px] font-semibold transition hover:bg-cream", active === n.key && "text-brand-600", n.key === "eco" && "text-eco"]}>{n.label}</a>
+      ))}
+    </nav>
+
+    <div class="ml-auto flex items-center gap-1.5 lg:gap-2">
+      <button type="button" data-sheet-open="sheet-search" class="hidden h-11 w-44 items-center gap-2.5 rounded-full bg-cream px-4 text-[14px] whitespace-nowrap text-muted ring-1 ring-line transition hover:ring-ink-2 lg:flex xl:w-56">
+        <Icon name="search" class="size-[18px] flex-none" /> Search…
+        <kbd class="ml-auto hidden rounded-md bg-white px-1.5 py-0.5 text-[11px] font-semibold ring-1 ring-line xl:inline">Ctrl K</kbd>
+      </button>
+      <button type="button" data-sheet-open="sheet-enquiry" class="relative hidden h-11 items-center gap-2 rounded-full px-4 font-semibold transition hover:bg-cream lg:flex" aria-label="Open enquiry list">
+        <span class="relative" data-list-target><Icon name="list" class="size-6" />
+          <span data-list-count hidden class="absolute -top-2 -right-2.5 grid h-5 min-w-5 place-items-center rounded-full bg-brand px-1 text-[11px] font-bold text-white">0</span>
+        </span>
+        <span class="hidden text-[15px] whitespace-nowrap xl:inline">My list</span>
+      </button>
+      <a href={waHref()} target="_blank" rel="noopener" class="btn btn-wa btn-sm hidden lg:inline-flex" data-magnetic><Icon name="whatsapp" class="size-[18px]" /> WhatsApp</a>
+      <!-- Mobile -->
+      <a href={telHref} class="grid size-11 place-items-center rounded-full bg-cream text-ink lg:hidden" aria-label={`Call ${site.phoneDisplay}`}><Icon name="phone" class="size-[19px]" /></a>
+      <button type="button" data-sheet-open="sheet-menu" class="grid size-11 place-items-center rounded-full bg-ink text-white lg:hidden" aria-label="Open menu"><Icon name="menu" class="size-[22px]" /></button>
+    </div>
+  </div>
+</header>

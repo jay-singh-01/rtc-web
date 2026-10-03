@@ -1,0 +1,27 @@
+{
+  "name": "Bagasse Square & Rectangular Tray",
+  "category": "plates-bowls",
+  "material": "bagasse",
+  "description": "Multipurpose sugarcane trays for snacks, sweets and street food.",
+  "images": [
+    "../../assets/images/products/bagasse-tray/images/0.jpg",
+    "../../assets/images/products/bagasse-tray/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "Square tray",
+      "code": "DA13",
+      "dims": "142 × 142 × 21"
+    },
+    {
+      "label": "Rectangular tray",
+      "code": "DA14",
+      "dims": "215 × 142 × 20"
+    }
+  ],
+  "dimLabel": "L × W × H mm",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 430
+}

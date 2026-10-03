@@ -1,0 +1,22 @@
+{
+  "name": "Bagasse 500 ml Rectangular Container",
+  "category": "containers",
+  "material": "bagasse",
+  "description": "16 oz sugarcane rectangular container. PET lid available.",
+  "images": [
+    "../../assets/images/products/bagasse-rect-500/images/0.jpg",
+    "../../assets/images/products/bagasse-rect-500/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "500 ml / 16 oz",
+      "code": "DA20",
+      "dims": "174/119/42"
+    }
+  ],
+  "dimLabel": "L/W/H",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 140
+}

@@ -1,0 +1,59 @@
+{
+  "name": "Cornstarch Meal Box with Lid",
+  "category": "meal-trays",
+  "material": "cornstarch",
+  "description": "Biodegradable cornstarch compartment meal boxes. Microwave and freezer safe, strong and sturdy.",
+  "images": [
+    "../../assets/images/products/corn-meal-box/images/0.jpg",
+    "../../assets/images/products/corn-meal-box/images/1.jpg",
+    "../../assets/images/products/corn-meal-box/images/2.jpg",
+    "../../assets/images/products/corn-meal-box/images/3.jpg"
+  ],
+  "options": [
+    {
+      "label": "3 CP meal box",
+      "code": "7041",
+      "dims": "220/170/40"
+    },
+    {
+      "label": "3 CP lid",
+      "code": "7041L",
+      "dims": "220/170/7"
+    },
+    {
+      "label": "4 CP meal box",
+      "code": "7043",
+      "dims": "250/200/40"
+    },
+    {
+      "label": "4 CP lid",
+      "code": "7043L",
+      "dims": "250/200/7"
+    },
+    {
+      "label": "5 CP meal box",
+      "code": "7045",
+      "dims": "250/200/40"
+    },
+    {
+      "label": "5 CP lid",
+      "code": "7045L",
+      "dims": "250/200/7"
+    },
+    {
+      "label": "8 CP meal box",
+      "code": "7048",
+      "dims": "300/240/40"
+    },
+    {
+      "label": "8 CP lid",
+      "code": "7048L",
+      "dims": "—"
+    }
+  ],
+  "dimLabel": "L/W/H",
+  "colors": [],
+  "colorLabel": "",
+  "featured": true,
+  "sortOrder": 350
+}

@@ -1,0 +1,37 @@
+{
+  "name": "PET Glass with Flat & Dome Lid",
+  "category": "cups",
+  "material": "pet",
+  "description": "Packaging glasses for juices, cold coffee and shakes with flat or dome lid.",
+  "images": [
+    "../../assets/images/products/pet-glass-lid/images/0.jpg",
+    "../../assets/images/products/pet-glass-lid/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "200 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "250 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "300 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "350 ml",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": true,
+  "sortOrder": 580
+}

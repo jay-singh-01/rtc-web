@@ -1,0 +1,21 @@
+{
+  "name": "Square Dessert Cup (D-30)",
+  "category": "dessert",
+  "material": "ps",
+  "description": "Premium PS acrylic serveware with a glass-like finish — for desserts, mithai, starters and buffets.",
+  "images": [
+    "../../assets/images/products/ps-d-30/images/0.jpg"
+  ],
+  "options": [
+    {
+      "label": "Square Dessert Cup",
+      "code": "D-30",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": true,
+  "sortOrder": 690
+}

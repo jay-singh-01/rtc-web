@@ -1,0 +1,33 @@
+---
+import { Image } from "astro:assets";
+import Icon from "@/components/ui/Icon.astro";
+import { img } from "@/lib/images";
+
+const points = [
+  "Wholesale and retail — from a few packets to bulk cartons",
+  "Plastic, paper, aluminium and eco-friendly bagasse, cornstarch, wood & clay",
+  "Custom printing solutions for your brand",
+  "Quick replies on WhatsApp",
+];
+---
+<section id="about" class="section scroll-mt-24 overflow-hidden">
+  <div class="wrap grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+    <div class="relative order-2 grid grid-cols-2 gap-3 lg:order-1">
+      <div class="col-span-2 overflow-hidden rounded-[28px]" data-reveal>
+        <Image src={img("bagasse-range")} alt="Sugarcane bagasse plates, bowls and trays" widths={[480, 800]} sizes="(min-width:1024px) 600px, 100vw" class="h-56 w-full scale-110 object-cover sm:h-72" data-parallax="0.1" />
+      </div>
+      <div class="overflow-hidden rounded-[28px]" data-reveal><Image src={img("life-pet")} alt="PET square containers with snacks" widths={[320, 480]} sizes="(min-width:1024px) 300px, 50vw" class="h-44 w-full object-cover sm:h-56" /></div>
+      <div class="overflow-hidden rounded-[28px]" data-reveal><Image src={img("life-chaat")} alt="Chaat in a bagasse tray" widths={[320, 480]} sizes="(min-width:1024px) 300px, 50vw" class="h-44 w-full object-cover sm:h-56" /></div>
+      <div class="absolute -bottom-5 left-1/2 -translate-x-1/2 rounded-full bg-sun px-5 py-2.5 text-[14px] font-bold whitespace-nowrap shadow-xl" data-reveal>📍 Gunj Road, Raichur</div>
+    </div>
+    <div class="order-1 lg:order-2">
+      <p class="eyebrow mb-3" data-reveal>About RTC</p>
+      <h2 class="h-section" data-reveal>Quality you trust.<br />Packaging that protects.</h2>
+      <p class="mt-5 text-[16.5px] leading-relaxed text-ink-2" data-reveal>Rajput Trading Company (RTC) is a disposable food packaging supplier on Gunj Road, Raichur. We stock containers, meal trays, plates, cups, dessertware and eco-friendly tableware for restaurants, caterers, sweet shops, bakeries, cafés, cloud kitchens and homes.</p>
+      <ul class="mt-6 grid gap-3">
+        {points.map((p) => <li class="flex gap-3 text-[15.5px]" data-reveal><span class="mt-0.5 grid size-6 flex-none place-items-center rounded-full bg-eco-50 text-eco"><Icon name="check" class="size-4" strokeWidth={2.4} /></span>{p}</li>)}
+      </ul>
+      <a href="/contact" class="btn btn-ink mt-8" data-reveal>Visit or contact us <Icon name="arrow" /></a>
+    </div>
+  </div>
+</section>

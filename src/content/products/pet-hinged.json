@@ -1,0 +1,76 @@
+{
+  "name": "PET Hinged Box",
+  "category": "containers",
+  "material": "pet",
+  "description": "Crystal-clear PET boxes with attached lid for sweets, bakery and salads. Flat lid.",
+  "images": [
+    "../../assets/images/products/pet-hinged/images/0.jpg",
+    "../../assets/images/products/pet-hinged/images/1.jpg",
+    "../../assets/images/products/pet-hinged/images/2.jpg",
+    "../../assets/images/products/pet-hinged/images/3.jpg",
+    "../../assets/images/products/pet-hinged/images/4.jpg",
+    "../../assets/images/products/pet-hinged/images/5.jpg"
+  ],
+  "options": [
+    {
+      "label": "250 ml",
+      "code": "1421",
+      "dims": "115/130/35"
+    },
+    {
+      "label": "375 ml",
+      "code": "1422",
+      "dims": "115/130/50"
+    },
+    {
+      "label": "500 ml",
+      "code": "1423",
+      "dims": "115/130/56"
+    },
+    {
+      "label": "600 ml",
+      "code": "1427",
+      "dims": "180/130/45"
+    },
+    {
+      "label": "650 ml",
+      "code": "1426",
+      "dims": "195/145/45"
+    },
+    {
+      "label": "750 ml",
+      "code": "1428",
+      "dims": "180/130/55"
+    },
+    {
+      "label": "1000 ml",
+      "code": "1429",
+      "dims": "180/130/77"
+    },
+    {
+      "label": "1250 ml",
+      "code": "1326",
+      "dims": "230/180/50"
+    },
+    {
+      "label": "1500 ml",
+      "code": "1327",
+      "dims": "230/180/55"
+    },
+    {
+      "label": "2000 ml",
+      "code": "1328",
+      "dims": "230/180/75"
+    },
+    {
+      "label": "2250 ml",
+      "code": "1328",
+      "dims": "230/180/90"
+    }
+  ],
+  "dimLabel": "L/W/H",
+  "colors": [],
+  "colorLabel": "",
+  "featured": true,
+  "sortOrder": 170
+}

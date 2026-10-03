@@ -1,0 +1,35 @@
+---
+import { Image } from "astro:assets";
+import Icon from "@/components/ui/Icon.astro";
+import { img } from "@/lib/images";
+import { materials } from "@/content/taxonomy";
+import { products } from "@/lib/products";
+---
+<section class="section overflow-hidden bg-cream">
+  <div class="wrap">
+    <div class="mb-8 flex flex-wrap items-end justify-between gap-4">
+      <div data-reveal><p class="eyebrow mb-3">Shop by material</p><h2 class="h-section">The right material<br class="sm:hidden" /> for every dish</h2></div>
+      <div class="flex gap-2" data-reveal>
+        <button type="button" class="hidden size-12 place-items-center rounded-full bg-white ring-1 ring-line transition hover:ring-ink sm:grid" data-scroll-row="mat-row" data-dir="-1" aria-label="Scroll left"><Icon name="left" /></button>
+        <button type="button" class="hidden size-12 place-items-center rounded-full bg-ink text-white sm:grid" data-scroll-row="mat-row" data-dir="1" aria-label="Scroll right"><Icon name="right" /></button>
+      </div>
+    </div>
+  </div>
+  <div class="wrap max-sm:px-0">
+    <div id="mat-row" class="snap-row no-scrollbar pb-2 max-sm:px-4">
+      {materials.map((m) => (
+        <a href={`/products?mat=${m.id}`} class="group w-[64%] flex-none overflow-hidden rounded-[26px] bg-white ring-1 ring-line transition hover:-translate-y-1 hover:shadow-xl sm:w-[34%] lg:w-[23%]" data-reveal>
+          <div class="relative aspect-[4/3] overflow-hidden">
+            <Image src={img(m.image)} alt="" widths={[320, 480]} sizes="(min-width:1024px) 300px, 64vw" class="size-full object-cover transition duration-700 group-hover:scale-110" />
+            {m.eco && <span class="pill pill-eco absolute top-3 left-3"><Icon name="leaf" class="size-3" /> Eco-friendly</span>}
+          </div>
+          <div class="p-4 sm:p-5">
+            <h3 class="text-[19px]">{m.name}</h3>
+            <p class="mt-1 text-[13.5px] text-muted">{m.blurb}</p>
+            <p class="mt-3 inline-flex items-center gap-1 text-[13.5px] font-semibold text-brand-600">{products.filter((p) => p.material === m.id).length} products <Icon name="arrow" class="size-4 transition group-hover:translate-x-1" /></p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

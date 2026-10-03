@@ -1,0 +1,42 @@
+{
+  "name": "Aluminium Container with Lid",
+  "category": "containers",
+  "material": "aluminium",
+  "description": "Oven-safe aluminium foil containers with board lids. Keeps food hot during delivery.",
+  "images": [
+    "../../assets/images/products/alu-rect/images/0.jpg",
+    "../../assets/images/products/alu-rect/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "250 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "350 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "500 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "750 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "1000 ml",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": true,
+  "sortOrder": 110
+}

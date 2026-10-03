@@ -1,0 +1,108 @@
+---
+import { Image } from "astro:assets";
+import Icon from "@/components/ui/Icon.astro";
+import { img } from "@/lib/images";
+import { categories } from "@/content/taxonomy";
+import { site, telHref, waHref } from "@/content/site";
+
+const popular = ["Meal tray", "Bagasse plate", "Paper cup", "Hinged box", "Kulhad", "Clamshell", "Dessert cup", "Straw"];
+const closeBtn = "grid size-10 place-items-center rounded-full bg-cream transition hover:bg-line";
+---
+<div id="sheet-backdrop" class="sheet-backdrop"></div>
+
+<!-- Quick add -->
+<section id="sheet-quick" class="sheet" data-center role="dialog" aria-modal="true" aria-label="Add to enquiry list" aria-hidden="true" inert>
+  <div class="sheet-handle"></div>
+  <div class="flex justify-end px-4 pt-3"><button type="button" class={closeBtn} data-sheet-close aria-label="Close"><Icon name="close" /></button></div>
+  <div class="sheet-body px-5 pb-4" id="qa-content"></div>
+  <div class="border-t border-line p-4"><button type="button" id="qa-add" class="btn btn-brand w-full py-4 text-base"><Icon name="plus" /> Add to enquiry list</button></div>
+</section>
+
+<!-- Enquiry list -->
+<section id="sheet-enquiry" class="sheet" data-full role="dialog" aria-modal="true" aria-labelledby="eq-title" aria-hidden="true" inert>
+  <div class="sheet-handle"></div>
+  <div class="flex items-center justify-between gap-3 px-5 pt-3 pb-2">
+    <h2 id="eq-title" class="text-[22px]">Your enquiry list</h2>
+    <button type="button" class={closeBtn} data-sheet-close aria-label="Close"><Icon name="close" /></button>
+  </div>
+  <div class="sheet-body" id="eq-body"></div>
+  <div class="border-t border-line bg-white p-4" id="eq-foot"></div>
+</section>
+
+<!-- Search -->
+<section id="sheet-search" class="sheet" data-full data-center role="dialog" aria-modal="true" aria-label="Search products" aria-hidden="true" inert>
+  <div class="sheet-handle"></div>
+  <form id="search-form" class="flex items-center gap-2 px-4 pt-3 pb-3" role="search">
+    <label class="relative flex-1">
+      <span class="sr-only">Search products</span>
+      <Icon name="search" class="pointer-events-none absolute top-1/2 left-4 size-5 -translate-y-1/2 text-muted" />
+      <input id="search-input" type="search" enterkeyhint="search" autocomplete="off" placeholder="Try “meal tray”, “kulhad” or DA07" class="field rounded-full py-3.5 pl-12 text-base" data-autofocus />
+    </label>
+    <button type="button" class={closeBtn} data-sheet-close aria-label="Close"><Icon name="close" /></button>
+  </form>
+  <div class="sheet-body pb-6">
+    <div id="search-idle" class="px-5 pt-2">
+      <p class="mb-3 text-[12.5px] font-semibold tracking-wider text-muted uppercase">Popular searches</p>
+      <div class="flex flex-wrap gap-2">
+        {popular.map((p) => <button type="button" data-search-chip={p} class="rounded-full bg-cream px-4 py-2 text-[14px] font-medium ring-1 ring-line transition hover:ring-ink">{p}</button>)}
+      </div>
+      <p class="mt-7 mb-3 text-[12.5px] font-semibold tracking-wider text-muted uppercase">Categories</p>
+      <div class="grid grid-cols-3 gap-2.5">
+        {categories.map((c) => (
+          <a href={`/category/${c.id}`} class="group text-center">
+            <Image src={img(c.image)} alt="" width={160} height={160} class="aspect-square w-full rounded-2xl object-cover transition duration-500 group-hover:scale-105" />
+            <span class="mt-1.5 block text-[12.5px] leading-tight font-semibold">{c.short}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+    <div id="search-results" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- Menu / Shop -->
+<section id="sheet-menu" class="sheet" data-side="left" data-full role="dialog" aria-modal="true" aria-label="Menu" aria-hidden="true" inert>
+  <div class="sheet-handle"></div>
+  <div class="flex items-center justify-between px-5 pt-3 pb-2">
+    <h2 class="text-[22px]">Shop</h2>
+    <button type="button" class={closeBtn} data-sheet-close aria-label="Close"><Icon name="close" /></button>
+  </div>
+  <div class="sheet-body px-5 pb-6">
+    <div class="grid grid-cols-2 gap-3">
+      {categories.map((c) => (
+        <a href={`/category/${c.id}`} class="group relative overflow-hidden rounded-3xl bg-cream">
+          <Image src={img(c.image)} alt="" width={300} height={300} class="aspect-[4/3] w-full object-cover transition duration-500 group-active:scale-105" />
+          <span class="block px-3 py-2.5 text-[14px] leading-tight font-semibold">{c.name}</span>
+        </a>
+      ))}
+      <a href="/products" class="flex flex-col justify-between rounded-3xl bg-ink p-4 text-white">
+        <Icon name="grid" class="size-7" /><span class="text-[15px] leading-tight font-semibold">All products <Icon name="arrow" class="inline size-4" /></span>
+      </a>
+    </div>
+    <div class="mt-6 grid gap-1 text-[16px] font-semibold">
+      <a href="/products?eco=1" class="flex items-center justify-between rounded-2xl px-2 py-3.5 text-eco hover:bg-cream">🌿 Eco-friendly range <Icon name="right" class="size-4" /></a>
+      <a href="/catalogues" class="flex items-center justify-between rounded-2xl px-2 py-3.5 hover:bg-cream">Download catalogues <Icon name="right" class="size-4" /></a>
+      <a href="/#about" class="flex items-center justify-between rounded-2xl px-2 py-3.5 hover:bg-cream">About RTC <Icon name="right" class="size-4" /></a>
+      <a href="/contact" class="flex items-center justify-between rounded-2xl px-2 py-3.5 hover:bg-cream">Contact &amp; directions <Icon name="right" class="size-4" /></a>
+    </div>
+    <div class="mt-5 grid grid-cols-2 gap-2.5">
+      <a href={waHref()} target="_blank" rel="noopener" class="btn btn-wa"><Icon name="whatsapp" /> WhatsApp</a>
+      <a href={telHref} class="btn btn-ghost"><Icon name="phone" /> Call</a>
+    </div>
+  </div>
+</section>
+
+<!-- Toast -->
+<div id="toast" role="status" class="pointer-events-none fixed inset-x-0 bottom-[96px] z-[70] flex justify-center px-4 opacity-0 transition duration-300 data-show:pointer-events-auto data-show:opacity-100 lg:bottom-8 [&:not([data-show])]:translate-y-4">
+  <div class="flex max-w-full items-center gap-3 rounded-full bg-ink py-2.5 pr-2.5 pl-5 text-[14px] text-white shadow-2xl">
+    <Icon name="check" class="size-5 flex-none text-wa" />
+    <span id="toast-msg" class="truncate"></span>
+    <button type="button" id="toast-action" data-sheet-open="sheet-enquiry" class="flex-none rounded-full bg-white/10 px-3.5 py-1.5 text-[13px] font-bold text-sun">View list</button>
+  </div>
+</div>
+
+<!-- Desktop floating WhatsApp -->
+<a href={waHref()} target="_blank" rel="noopener" aria-label={`Chat with ${site.short} on WhatsApp`} class="fixed right-6 bottom-6 z-[55] hidden size-16 place-items-center rounded-full bg-wa text-white shadow-[0_14px_34px_-8px_rgba(37,211,102,.7)] transition hover:scale-110 lg:grid" data-magnetic>
+  <span class="absolute inset-0 animate-ping rounded-full bg-wa/40 [animation-duration:2.6s]"></span>
+  <Icon name="whatsapp" class="relative size-8" />
+</a>

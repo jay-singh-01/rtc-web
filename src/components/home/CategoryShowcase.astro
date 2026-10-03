@@ -1,0 +1,46 @@
+---
+import { Image } from "astro:assets";
+import Icon from "@/components/ui/Icon.astro";
+import { img } from "@/lib/images";
+import { categories } from "@/content/taxonomy";
+import { products } from "@/lib/products";
+
+const count = (id: string) => products.filter((p) => p.category === id).length;
+---
+<section class="section">
+  <div class="wrap">
+    <div class="mb-8 flex flex-wrap items-end justify-between gap-4 sm:mb-12">
+      <div data-reveal>
+        <p class="eyebrow mb-3">Shop by category</p>
+        <h2 class="h-section">What are you<br class="sm:hidden" /> packing today?</h2>
+      </div>
+      <a href="/products" class="inline-flex items-center gap-1.5 font-semibold text-brand-600" data-reveal>All products <Icon name="arrow" class="size-4" /></a>
+    </div>
+    <!-- Bento grid: first tile is the hero tile -->
+    <div class="grid auto-rows-[minmax(150px,1fr)] grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4 lg:auto-rows-[220px]">
+      {categories.map((c, i) => (
+        <a
+          href={`/category/${c.id}`}
+          class:list={["group relative isolate overflow-hidden rounded-[26px] bg-cream", i === 0 && "col-span-2 row-span-2", (i === 5 || i === 8) && "lg:col-span-2"]}
+          data-reveal="scale"
+        >
+          <Image src={img(c.image)} alt="" widths={[320, 520, 800]} sizes={i === 0 ? "(min-width:1024px) 640px, 100vw" : "(min-width:1024px) 320px, 50vw"} class="absolute inset-0 -z-10 size-full object-cover transition duration-[1.2s] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-110" />
+          <div class="absolute inset-0 -z-10 bg-gradient-to-t from-black/75 via-black/15 to-transparent"></div>
+          <div class="flex h-full flex-col justify-end p-4 text-white sm:p-5">
+            <p class="text-[12px] font-semibold text-white/80">{count(c.id)} products</p>
+            <h3 class:list={["mt-1 leading-tight text-white", i === 0 ? "text-[clamp(24px,4vw,40px)]" : "text-[17px] sm:text-[20px]"]}>{c.name}</h3>
+            {i === 0 && <p class="mt-2 hidden max-w-sm text-[14.5px] text-white/85 sm:block">{c.blurb}</p>}
+          </div>
+          <span class="absolute top-3 right-3 grid size-10 place-items-center rounded-full bg-white/90 text-ink opacity-0 transition duration-500 group-hover:rotate-[-45deg] group-hover:opacity-100 max-lg:opacity-100 max-lg:size-8"><Icon name="arrow" class="size-4" /></span>
+        </a>
+      ))}
+      <a href="/products" class="group col-span-2 flex items-center justify-between gap-4 rounded-[26px] bg-ink p-6 text-white sm:p-8" data-reveal="scale">
+        <span>
+          <span class="block text-[13px] font-semibold text-white/60">{products.length} products · 9 categories</span>
+          <span class="mt-1 block font-display text-[clamp(22px,3vw,34px)] leading-tight font-extrabold">Browse everything</span>
+        </span>
+        <span class="grid size-14 flex-none place-items-center rounded-full bg-brand transition duration-500 group-hover:rotate-[-45deg]"><Icon name="arrow" class="size-6" /></span>
+      </a>
+    </div>
+  </div>
+</section>

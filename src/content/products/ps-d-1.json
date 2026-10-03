@@ -1,0 +1,21 @@
+{
+  "name": "Stemmed Round Dessert Cup (D-1)",
+  "category": "dessert",
+  "material": "ps",
+  "description": "Premium PS acrylic serveware with a glass-like finish — for desserts, mithai, starters and buffets.",
+  "images": [
+    "../../assets/images/products/ps-d-1/images/0.jpg"
+  ],
+  "options": [
+    {
+      "label": "Stemmed Round Dessert Cup",
+      "code": "D-1",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": true,
+  "sortOrder": 700
+}

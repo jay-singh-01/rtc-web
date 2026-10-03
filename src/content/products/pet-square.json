@@ -1,0 +1,42 @@
+{
+  "name": "PET Square Container",
+  "category": "containers",
+  "material": "pet",
+  "description": "Square clear PET containers on a 115 mm base, from 8 oz to 32 oz.",
+  "images": [
+    "../../assets/images/products/pet-square/images/0.jpg",
+    "../../assets/images/products/pet-square/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "250 ml – 8 oz",
+      "code": "1316",
+      "dims": "115/115/40"
+    },
+    {
+      "label": "350 ml – 12 oz",
+      "code": "1317",
+      "dims": "115/115/50"
+    },
+    {
+      "label": "500 ml – 18 oz",
+      "code": "1318",
+      "dims": "115/115/75"
+    },
+    {
+      "label": "750 ml – 26 oz",
+      "code": "1319",
+      "dims": "115/115/105"
+    },
+    {
+      "label": "1000 ml – 32 oz",
+      "code": "1320",
+      "dims": "115/115/125"
+    }
+  ],
+  "dimLabel": "L/W/H",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 190
+}

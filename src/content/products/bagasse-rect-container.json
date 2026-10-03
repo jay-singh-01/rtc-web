@@ -1,0 +1,42 @@
+{
+  "name": "Bagasse Rectangular Container with Lid",
+  "category": "containers",
+  "material": "bagasse",
+  "description": "Compostable sugarcane containers with matching lid.",
+  "images": [
+    "../../assets/images/products/bagasse-rect-container/images/0.jpg",
+    "../../assets/images/products/bagasse-rect-container/images/1.jpg"
+  ],
+  "options": [
+    {
+      "label": "250 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "350 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "500 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "750 ml",
+      "code": "",
+      "dims": ""
+    },
+    {
+      "label": "1000 ml",
+      "code": "",
+      "dims": ""
+    }
+  ],
+  "dimLabel": "",
+  "colors": [],
+  "colorLabel": "",
+  "featured": false,
+  "sortOrder": 120
+}
